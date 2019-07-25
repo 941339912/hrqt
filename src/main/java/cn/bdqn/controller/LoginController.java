@@ -8,7 +8,7 @@ public class LoginController {
 
     @RequestMapping("/logi")
     public String login1(){
-        return "郑竑方大沙雕";
+        return "岳科文大沙雕";
     }
 }
 
