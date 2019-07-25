@@ -8,7 +8,7 @@ public class LoginController {
 
     @RequestMapping("/logi")
     public String login1(){
-        return "郑红方大傻逼+1";
+        return "郑红方大傻逼+11";
     }
 }
 
