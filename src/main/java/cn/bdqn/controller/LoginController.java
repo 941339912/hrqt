@@ -8,6 +8,6 @@ public class LoginController {
 
     @RequestMapping("/logi")
     public String login1(){
-        return "56465";
+        return "56465865695";
     }
 }
