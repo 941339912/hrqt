@@ -6,5 +6,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class LoginController {
 
-
+    @RequestMapping("/logi")
+    public String login1(){
+        return "";
+    }
 }
