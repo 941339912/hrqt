@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class LoginController {
 
     @RequestMapping("/logi")
-    public String login1(){
-        return "1";
+    public String login1() {
+        return "aaaaa";
     }
 
 }
