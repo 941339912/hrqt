@@ -822,6 +822,7 @@
 <!--                </li>-->
                 <li class="PMenu"><a href="javascript:;" id="Nav_AMenu8" class="PAMenu">云医院</a></li>
             </ul>
+     </div>
     </div>
 </nav>
 
@@ -932,11 +933,13 @@
     <div class="toolsBase">
         <div class="title"><em>专家介绍</em> <span>Expert Introduction</span></div>
         <div class="tools"><a href="javascript:;" class="ASwitch" id="DSearchSwitch">快速查找</a>
-            <form method="get" class="search" action="Search" onSubmit="return Kunyi.CheckSearchFrom()"><input
-                    type="hidden" name="Type" value="2"/><input type="text" name="SearchWords" placeholder="请输入医生名字"
-                                                                class="animated" value="" autocomplete="off"
-                                                                maxlength="28"/><input class="btn" type="submit"
-                                                                                       value=""/></form>
+            <form method="get" class="search" action="" onSubmit="return Kunyi.CheckSearchFrom()">
+                <input type="hidden" name="Type" value="2"/>
+                <input type="text" name="SearchWords" placeholder="请输入医生名字"
+                       class="animated" value="" autocomplete="off" id="text_doctor"
+                       maxlength="28"/>
+                <input class="btn" type="button" id="btn_docQuery" value=""/>
+            </form>
             <a href="keshi" class="Amore">更多 >></a>
             <a href="javascript:;" class="Aprev"></a>
             <a href="javascript:;" class="Anext"></a>
@@ -944,81 +947,16 @@
         <div class="clear"></div>
     </div>
     <div class="contents">
-        <ul data-num="0">
+        <ul data-num="0" class="ul_doctor">
 
-            <li><a href="ys" title="医生姓名" target="_blank" class="img"><img alt="姓名" title="姓名"
-                                                                           src="pic/201603221527067.png" width="120"
-                                                                           height="162"/></a>
-                <a href="ys" title="医生姓名" target="_blank" class="name">姓名</a>
-                <a href="keshi" title="所在医院" target="_blank" class="office">所在医院医院</a>
-                <a href="ys" title="姓名" target="_blank" class="post">主任医师 研究生导师</a>
-                <a href="ys" title="姓名" target="_blank" class="btn more">详细</a>
-                <a href="#" target="_blank" class="btn date">预约</a></li>
-
-            <li><a href="ys" title="医生姓名" target="_blank" class="img"><img alt="姓名" title="姓名"
-                                                                           src="pic/201603221527067.png" width="120"
-                                                                           height="162"/></a>
-                <a href="ys" title="医生姓名" target="_blank" class="name">姓名</a>
-                <a href="keshi" title="所在医院" target="_blank" class="office">所在医院医院</a>
-                <a href="ys" title="姓名" target="_blank" class="post">主任医师 研究生导师</a>
-                <a href="ys" title="姓名" target="_blank" class="btn more">详细</a>
-                <a href="#" target="_blank" class="btn date">预约</a></li>
-            <li><a href="ys" title="医生姓名" target="_blank" class="img"><img alt="姓名" title="姓名"
-                                                                           src="pic/201603221527067.png" width="120"
-                                                                           height="162"/></a>
-                <a href="ys" title="医生姓名" target="_blank" class="name">姓名</a>
-                <a href="keshi" title="所在医院" target="_blank" class="office">所在医院医院</a>
-                <a href="ys" title="姓名" target="_blank" class="post">主任医师 研究生导师</a>
-                <a href="ys" title="姓名" target="_blank" class="btn more">详细</a>
-                <a href="#" target="_blank" class="btn date">预约</a></li>
-            <li><a href="ys" title="医生姓名" target="_blank" class="img"><img alt="姓名" title="姓名"
-                                                                           src="pic/201603221527067.png" width="120"
-                                                                           height="162"/></a>
-                <a href="ys" title="医生姓名" target="_blank" class="name">姓名</a>
-                <a href="keshi" title="所在医院" target="_blank" class="office">所在医院医院</a>
-                <a href="ys" title="姓名" target="_blank" class="post">主任医师 研究生导师</a>
-                <a href="ys" title="姓名" target="_blank" class="btn more">详细</a>
-                <a href="#" target="_blank" class="btn date">预约</a></li>
-            <li><a href="ys" title="医生姓名" target="_blank" class="img"><img alt="姓名" title="姓名"
-                                                                           src="pic/201603221527067.png" width="120"
-                                                                           height="162"/></a>
-                <a href="ys" title="医生姓名" target="_blank" class="name">姓名</a>
-                <a href="keshi" title="所在医院" target="_blank" class="office">所在医院医院</a>
-                <a href="ys" title="姓名" target="_blank" class="post">主任医师 研究生导师</a>
-                <a href="ys" title="姓名" target="_blank" class="btn more">详细</a>
-                <a href="#" target="_blank" class="btn date">预约</a></li>
-            <li><a href="ys" title="医生姓名" target="_blank" class="img"><img alt="姓名" title="姓名"
-                                                                           src="pic/201603221527067.png" width="120"
-                                                                           height="162"/></a>
-                <a href="ys" title="医生姓名" target="_blank" class="name">姓名</a>
-                <a href="keshi" title="所在医院" target="_blank" class="office">所在医院医院</a>
-                <a href="ys" title="姓名" target="_blank" class="post">主任医师 研究生导师</a>
-                <a href="ys" title="姓名" target="_blank" class="btn more">详细</a>
-                <a href="#" target="_blank" class="btn date">预约</a></li>
-            <li><a href="ys" title="医生姓名" target="_blank" class="img"><img alt="姓名" title="姓名"
-                                                                           src="pic/201603221527067.png" width="120"
-                                                                           height="162"/></a>
-                <a href="ys" title="医生姓名" target="_blank" class="name">姓名</a>
-                <a href="keshi" title="所在医院" target="_blank" class="office">所在医院医院</a>
-                <a href="ys" title="姓名" target="_blank" class="post">主任医师 研究生导师</a>
-                <a href="ys" title="姓名" target="_blank" class="btn more">详细</a>
-                <a href="#" target="_blank" class="btn date">预约</a></li>
-            <li><a href="ys" title="医生姓名" target="_blank" class="img"><img alt="姓名" title="姓名"
-                                                                           src="pic/201603221527067.png" width="120"
-                                                                           height="162"/></a>
-                <a href="ys" title="医生姓名" target="_blank" class="name">姓名</a>
-                <a href="keshi" title="所在医院" target="_blank" class="office">所在医院医院</a>
-                <a href="ys" title="姓名" target="_blank" class="post">主任医师 研究生导师</a>
-                <a href="ys" title="姓名" target="_blank" class="btn more">详细</a>
-                <a href="#" target="_blank" class="btn date">预约</a></li>
-            <li><a href="ys" title="医生姓名" target="_blank" class="img"><img alt="姓名" title="姓名"
-                                                                           src="pic/201603221527067.png" width="120"
-                                                                           height="162"/></a>
-                <a href="ys" title="医生姓名" target="_blank" class="name">姓名</a>
-                <a href="keshi" title="所在医院" target="_blank" class="office">所在医院医院</a>
-                <a href="ys" title="姓名" target="_blank" class="post">主任医师 研究生导师</a>
-                <a href="ys" title="姓名" target="_blank" class="btn more">详细</a>
-                <a href="#" target="_blank" class="btn date">预约</a></li>
+<!--            <li><a href="ys" title="医生姓名" target="_blank" class="img"><img alt="姓名" title="姓名"-->
+<!--               src="pic/201603221527067.png" width="120" height="162"/></a>-->
+<!--                <a href="ys" title="医生姓名" target="_blank" class="name">姓名</a>-->
+<!--                <a href="keshi" title="所在医院" target="_blank" class="office">所在医院医院</a>-->
+<!--                <a href="ys" title="姓名" target="_blank" class="post">主任医师 研究生导师</a>-->
+<!--                <a href="ys" title="姓名" target="_blank" class="btn more">详细</a>-->
+<!--                <a href="#" target="_blank" class="btn date">预约</a></li>-->
+        </ul>
             <div class="hackR"></div>
             <div class="hackL"></div>
     </div>
@@ -1027,7 +965,10 @@
             <button class="animated">关闭查找</button>
         </div>
         <div class="DFContent">
-            <div class="DListBase"></div>
+            <div class="DListBase">
+                <div class="contents" style="margin-top: -60px;">
+                    <ul data-num="0" class="ul_zimu"></ul>
+                </div></div>
             <div class="IndexWords">
                 <ul>
                     <li data-index="0">A</li>
@@ -1338,5 +1279,6 @@
 </div>
 <script language="javascript" type="text/javascript" src="js/Kunyi.Common.js"></script>
 <script language="javascript" type="text/javascript" src="js/Kunyi.Index.js"></script>
+<script language="javascript" type="text/javascript" src="js/doctor.js"></script>
 </body>
 </html>
