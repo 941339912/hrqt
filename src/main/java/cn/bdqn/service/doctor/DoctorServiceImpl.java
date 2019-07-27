@@ -18,8 +18,4 @@ public class DoctorServiceImpl implements DoctorService {
         return doctorMapper.findQueryDoctor(dname, dpinyin);
     }
 
-    @Override
-    public int add() {
-        return 0;
-    }
 }

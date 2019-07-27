@@ -13,5 +13,4 @@ public interface DoctorMapper {
      */
     public List<Doctor> findQueryDoctor(String dname, String dpinyin);
 
-    public int add();
 }
