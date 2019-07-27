@@ -17,4 +17,9 @@ public class DoctorServiceImpl implements DoctorService {
     public List<Doctor> getQueryDoctor(String dname, String dpinyin) {
         return doctorMapper.findQueryDoctor(dname, dpinyin);
     }
+
+    @Override
+    public int add() {
+        return 0;
+    }
 }

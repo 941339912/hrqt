@@ -11,4 +11,6 @@ public interface DoctorService {
      * @return
      */
     public List<Doctor> getQueryDoctor(String dname, String dpinyin);
+
+    public  int add();
 }
