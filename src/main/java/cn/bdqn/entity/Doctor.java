@@ -1,14 +1,15 @@
 package cn.bdqn.entity;
-import java.sql.Date;
+
 
 public class Doctor {
+
   private long id;
   private String dName;
+  private String dPinyin;
   private java.sql.Date birthDate;
   private java.sql.Date cyDate;
   private String eAddress;
-  private String hPostion;
-  private String nPostion;
+  private String postion;
   private String edcuation;
   private String graduate;
   private String hospital;
@@ -39,7 +40,16 @@ public class Doctor {
   }
 
 
-  public Date getBirthDate() {
+  public String getDPinyin() {
+    return dPinyin;
+  }
+
+  public void setDPinyin(String dPinyin) {
+    this.dPinyin = dPinyin;
+  }
+
+
+  public java.sql.Date getBirthDate() {
     return birthDate;
   }
 
@@ -66,21 +76,12 @@ public class Doctor {
   }
 
 
-  public String getHPostion() {
-    return hPostion;
+  public String getPostion() {
+    return postion;
   }
 
-  public void setHPostion(String hPostion) {
-    this.hPostion = hPostion;
-  }
-
-
-  public String getNPostion() {
-    return nPostion;
-  }
-
-  public void setNPostion(String nPostion) {
-    this.nPostion = nPostion;
+  public void setPostion(String postion) {
+    this.postion = postion;
   }
 
 
