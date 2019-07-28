@@ -1,6 +1,8 @@
 package cn.bdqn.entity;
 
 
+import java.sql.Date;
+
 public class Doctor {
 
   private long id;
@@ -20,7 +22,7 @@ public class Doctor {
   private String photopath;
   private long status;
   private String remark;
-
+  private String kName;
 
   public long getId() {
     return id;
@@ -30,51 +32,45 @@ public class Doctor {
     this.id = id;
   }
 
-
-  public String getDName() {
+  public String getdName() {
     return dName;
   }
 
-  public void setDName(String dName) {
+  public void setdName(String dName) {
     this.dName = dName;
   }
 
-
-  public String getDPinyin() {
+  public String getdPinyin() {
     return dPinyin;
   }
 
-  public void setDPinyin(String dPinyin) {
+  public void setdPinyin(String dPinyin) {
     this.dPinyin = dPinyin;
   }
 
-
-  public java.sql.Date getBirthDate() {
+  public Date getBirthDate() {
     return birthDate;
   }
 
-  public void setBirthDate(java.sql.Date birthDate) {
+  public void setBirthDate(Date birthDate) {
     this.birthDate = birthDate;
   }
 
-
-  public java.sql.Date getCyDate() {
+  public Date getCyDate() {
     return cyDate;
   }
 
-  public void setCyDate(java.sql.Date cyDate) {
+  public void setCyDate(Date cyDate) {
     this.cyDate = cyDate;
   }
 
-
-  public String getEAddress() {
+  public String geteAddress() {
     return eAddress;
   }
 
-  public void setEAddress(String eAddress) {
+  public void seteAddress(String eAddress) {
     this.eAddress = eAddress;
   }
-
 
   public String getPostion() {
     return postion;
@@ -84,7 +80,6 @@ public class Doctor {
     this.postion = postion;
   }
 
-
   public String getEdcuation() {
     return edcuation;
   }
@@ -92,7 +87,6 @@ public class Doctor {
   public void setEdcuation(String edcuation) {
     this.edcuation = edcuation;
   }
-
 
   public String getGraduate() {
     return graduate;
@@ -102,7 +96,6 @@ public class Doctor {
     this.graduate = graduate;
   }
 
-
   public String getHospital() {
     return hospital;
   }
@@ -110,7 +103,6 @@ public class Doctor {
   public void setHospital(String hospital) {
     this.hospital = hospital;
   }
-
 
   public String getResume() {
     return resume;
@@ -120,15 +112,13 @@ public class Doctor {
     this.resume = resume;
   }
 
-
-  public long getKId() {
+  public long getkId() {
     return kId;
   }
 
-  public void setKId(long kId) {
+  public void setkId(long kId) {
     this.kId = kId;
   }
-
 
   public long getIsExpert() {
     return isExpert;
@@ -138,7 +128,6 @@ public class Doctor {
     this.isExpert = isExpert;
   }
 
-
   public String getAchievement() {
     return achievement;
   }
@@ -146,7 +135,6 @@ public class Doctor {
   public void setAchievement(String achievement) {
     this.achievement = achievement;
   }
-
 
   public String getPhotopath() {
     return photopath;
@@ -156,7 +144,6 @@ public class Doctor {
     this.photopath = photopath;
   }
 
-
   public long getStatus() {
     return status;
   }
@@ -164,7 +151,6 @@ public class Doctor {
   public void setStatus(long status) {
     this.status = status;
   }
-
 
   public String getRemark() {
     return remark;
@@ -174,4 +160,11 @@ public class Doctor {
     this.remark = remark;
   }
 
+  public String getkName() {
+    return kName;
+  }
+
+  public void setkName(String kName) {
+    this.kName = kName;
+  }
 }

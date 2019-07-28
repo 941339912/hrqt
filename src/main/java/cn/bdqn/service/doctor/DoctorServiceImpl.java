@@ -17,4 +17,9 @@ public class DoctorServiceImpl implements DoctorService {
         return doctorMapper.findQueryDoctor(dname, dpinyin);
     }
 
+    @Override
+    public Doctor getByIdDoctor(int did) {
+        return doctorMapper.findByIdDoctor(did);
+    }
+
 }

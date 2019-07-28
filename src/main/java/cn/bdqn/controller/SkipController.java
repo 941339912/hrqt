@@ -69,10 +69,10 @@ public class SkipController {
         return "rongyu";
     }
 
-    @RequestMapping("/ys")
-    public String ys(){
-        return "ys";
-    }
+//    @RequestMapping("/ys")
+//    public String ys(){
+//        return "ys";
+//    }
 
     @RequestMapping("/zhuanjia")
     public String zhuanjia(){

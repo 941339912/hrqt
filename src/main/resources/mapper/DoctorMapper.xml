@@ -4,7 +4,8 @@
 <mapper namespace="cn.bdqn.dao.DoctorMapper">
 <!--    查询所有医生-->
     <select id="findQueryDoctor" resultType="Doctor" parameterType="String">
-        SELECT 	d.id,d.dName,d.dPinyin,d.birthDate,d.cyDate,d.eAddress,k.kName,d.postion,d.edcuation,d.graduate,d.hospital,d.resume,d.isExpert,d.achievement,d.photopath,d.status,d.remark
+        SELECT 	d.id,d.dName,d.dPinyin,d.birthDate,d.cyDate,d.eAddress,k.kName,d.postion,
+        d.edcuation,d.graduate,d.hospital,d.resume,d.isExpert,d.achievement,d.photopath,d.status,d.remark
         FROM doctor d
         JOIN koffice k ON d.kId=k.id
         <where>
@@ -19,6 +20,13 @@
     </select>
 
 
+    <select id="findByIdDoctor" resultType="Doctor" parameterType="int">
+        SELECT 	d.id,d.dName,d.dPinyin,d.birthDate,d.cyDate,d.eAddress,k.kName kName,d.postion,
+        d.edcuation,d.graduate,d.hospital,d.resume,d.isExpert,d.achievement,d.photopath,d.status,d.remark
+        FROM doctor d
+        JOIN koffice k ON d.kId=k.id
+        WHERE d.id=#{did}
+    </select>
 
 
 </mapper>

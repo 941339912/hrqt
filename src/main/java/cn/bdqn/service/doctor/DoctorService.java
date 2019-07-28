@@ -12,4 +12,10 @@ public interface DoctorService {
      */
     public List<Doctor> getQueryDoctor(String dname, String dpinyin);
 
+    /**
+     * 根据id查询医生
+     * @param did
+     * @return
+     */
+    public Doctor getByIdDoctor(int did);
 }

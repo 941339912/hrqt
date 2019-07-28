@@ -13,4 +13,11 @@ public interface DoctorMapper {
      */
     public List<Doctor> findQueryDoctor(String dname, String dpinyin);
 
+    /**
+     * 根据id查询医生
+     * @param did
+     * @return
+     */
+    public Doctor findByIdDoctor(int did);
+
 }
