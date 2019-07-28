@@ -26,4 +26,9 @@ public class DoctorServiceImpl implements DoctorService {
     public List<Doctor> findListByKId(Integer kId) {
         return doctorMapper.findListByKId(kId);
     }
+
+    @Override
+    public List<Doctor> selectDoctors(Long kId) {
+        return doctorMapper.selectDoctors(kId);
+    }
 }

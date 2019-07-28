@@ -17,4 +17,9 @@ public class MedicalServiceImpl implements MedicalService {
     public List<Medical> findMedicalList() {
         return medicalMapper.findMedicalList();
     }
+
+    @Override
+    public List<Medical> selectMedicals(Long id) {
+        return medicalMapper.selectMedicals(id);
+    }
 }

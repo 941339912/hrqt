@@ -25,4 +25,10 @@ public interface KofficeService {
      * @return
      */
     public List<Koffice> findOfficeList();
+
+    /**
+     * 根据医学部id查询科室
+     * @return
+     */
+    List<Koffice> selectKoffices(@Param("medicalId") Long medicalId);
 }

@@ -1,6 +1,7 @@
 package cn.bdqn.service.doctor;
 
 import cn.bdqn.entity.Doctor;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -25,4 +26,11 @@ public interface DoctorService {
      * @return
      */
     public List<Doctor> findListByKId(Integer kId);
+
+    /**
+     * 依据科室查询医生
+     * @param kId
+     * @return
+     */
+    List<Doctor> selectDoctors(@Param("kId")Long kId);
 }

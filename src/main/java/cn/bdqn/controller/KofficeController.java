@@ -13,8 +13,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
-import javax.servlet.http.HttpSession;
 import java.util.List;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMethod;
+import java.util.Map;
+
+/**
+ * 医学部、科室
+ */
 
 @Controller
 public class KofficeController {
@@ -50,12 +56,40 @@ public class KofficeController {
         return "keshiys";
     }
 
-    @RequestMapping("/officeList")
-    public String officeList(Model model){
+    /*@RequestMapping("/officeList")
+    public String officeList(Model model) {
         List<Koffice> officeList = kofficeService.findOfficeList();
         List<Medical> medicalList = medicalService.findMedicalList();
-        model.addAttribute("officeList",officeList);
-        model.addAttribute("medicalList",medicalList);
+        model.addAttribute("officeList", officeList);
+        model.addAttribute("medicalList", medicalList);
         return "keshi";
+    }*/
+    /**
+         * 医药部下拉框
+         * @param map
+         * @return
+         */
+    @RequestMapping(value = "/navigation/{id}",method = RequestMethod.POST)
+    @ResponseBody
+    public String navigation(@PathVariable("id") Long id, Map<String,Object> map){
+        List<Medical> medicals=medicalService.selectMedicals(id);
+        map.put("medicals",medicals);
+        return JSON.toJSONString(map);
+    }
+
+    @RequestMapping(value = "/department",method = RequestMethod.POST)
+    @ResponseBody
+    public String department(String medicalId,Map<String,Object> map){
+        List<Koffice> koffices=kofficeService.selectKoffices(Long.parseLong(medicalId));
+        map.put("koffices",koffices);
+        return JSON.toJSONString(map);
+    }
+
+    @RequestMapping(value = "/doctor",method = RequestMethod.POST)
+    @ResponseBody
+    public String doctor(String kId,Map<String,Object> map){
+        List<Doctor> doctors=doctorService.selectDoctors(Long.parseLong(kId));
+        map.put("doctors",doctors);
+        return JSON.toJSONString(map);
     }
 }

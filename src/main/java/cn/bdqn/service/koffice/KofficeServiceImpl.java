@@ -28,4 +28,9 @@ public class KofficeServiceImpl implements KofficeService {
         return kofficeMapper.findOfficeList();
     }
 
+    @Override
+    public List<Koffice> selectKoffices(Long medicalId) {
+        return kofficeMapper.selectKoffices(medicalId);
+    }
+
 }
