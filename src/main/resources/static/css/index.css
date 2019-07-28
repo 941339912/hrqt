@@ -252,3 +252,26 @@ nav .Inav{ width:938px;}
 	position:absolute;
 	right: 100px;
 }
+
+.div_zimu{
+	position: absolute;
+	right: 220px;
+}
+
+.input_zm{
+	border-radius: 5px;
+	height: 25px;
+	font-size: 18px;
+}
+
+.input_sc{
+	margin-left: 20px;
+	background-color: #FF7800;
+	border: 0;
+	color: #fff;
+	font-size: 12px;
+}
+
+.input_sc:hover{
+	background-color: #72CDCC;
+}

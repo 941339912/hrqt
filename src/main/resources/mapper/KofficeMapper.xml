@@ -7,7 +7,7 @@
     <select id="findEmphasisList" resultType="Koffice">
         select id, kName,resume,isEmphasis,status,remark, medicalId
         from koffice
-        where isEmphasis = 1 and status = 1
+        where status = 1
     </select>
 
     <select id="findKofficeById" resultType="Koffice">

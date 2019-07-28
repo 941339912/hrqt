@@ -962,6 +962,12 @@
     </div>
     <div class="DFastSearch">
         <div class="DFTitle"><label>按医生姓名首字母查找</label>
+            <div class="div_zimu">
+                <form action="#">
+                    <input type="text" name="zimu" id="zimuId" class="input_zm">
+                    <input type="button" id="zimuDel" value="删除" class="input_zm input_sc">
+                </form>
+            </div>
             <button class="animated">关闭查找</button>
         </div>
         <div class="DFContent">
@@ -1004,12 +1010,12 @@
         </div>
     </div>
 </section>
-<script src="js/koffice.js"></script>
-<section class="officesBase BaseMark">
+
+<section class="officesBase BaseMark" style="height: 362px;">
     <div class="toolsBase">
         <div class="title"><em>重点专科</em> <span>Key Specialty</span></div>
         <div class="tools"><a href="javascript:;" class="ASwitch" id="OSearchSwitch">快速查找科室</a>
-            <a href="officeList" class="Amore">更多 >></a>
+            <a href="keshi" class="Amore">更多 >></a>
             <a href="javascript:;" class="Aprev"></a>
             <a href="javascript:;" class="Anext"></a>
         </div>
@@ -1035,12 +1041,9 @@
             <button class="animated">返回重点科室</button>
         </div>
         <div class="OFContent">
-            <div class="OListBase">
-
-            </div>
+            <div class="OListBase"></div>
         </div>
     </div>
-
 </section>
 
 <!--<section class="othersBase BaseMark">-->
@@ -1227,5 +1230,6 @@
 <script language="javascript" type="text/javascript" src="js/Kunyi.Common.js"></script>
 <script language="javascript" type="text/javascript" src="js/Kunyi.Index.js"></script>
 <script language="javascript" type="text/javascript" src="js/doctor.js"></script>
+<script language="javascript" type="text/javascript" src="js/koffice.js"></script>
 </body>
 </html>
