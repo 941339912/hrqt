@@ -28,5 +28,12 @@
         WHERE d.id=#{did}
     </select>
 
+    <select id="findListByKId" resultType="Doctor" parameterType="int">
+        SELECT d.id,d.dName,d.dPinyin,d.birthDate,d.cyDate,d.eAddress,k.kName kName,d.postion,
+        d.edcuation,d.graduate,d.hospital,d.resume,d.isExpert,d.achievement,d.photopath,d.status,d.remark
+        FROM doctor d
+        JOIN koffice k ON d.kId=k.id
+        WHERE k.id=#{kId}
+    </select>
 
 </mapper>

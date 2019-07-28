@@ -20,4 +20,11 @@ public interface DoctorMapper {
      */
     public Doctor findByIdDoctor(int did);
 
+    /**
+     *  查询科室医生
+     * @param kId
+     * @return
+     */
+    public List<Doctor> findListByKId(Integer kId);
+
 }

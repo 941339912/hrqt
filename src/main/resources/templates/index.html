@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="renderer" content="webkit"/>
@@ -1004,7 +1004,7 @@
         </div>
     </div>
 </section>
-
+<script src="js/koffice.js"></script>
 <section class="officesBase BaseMark">
     <div class="toolsBase">
         <div class="title"><em>重点专科</em> <span>Key Specialty</span></div>
@@ -1016,69 +1016,13 @@
         <div class="clear"></div>
     </div>
     <div class="contents">
-        <ul data-num="0">
-            <li><i class="ico01"></i>
+        <ul data-num="0" id="officeEmphasis">
+           <!--<li><i class="ico01"></i>
                 <div class="img animated"><img alt="呼吸内科" src="pic/pic_007.png" width="80" height="80"/></div>
                 <a href="keshimx" title="呼吸内科" class="office">呼吸内科</a>
                 <p>我科始建于上世纪70年代初，目前为卫生部国家重点专科建设项目单位，山西省重点……</p>
                 <a href="keshimx" title="呼吸内科" class="btn more">查看详细</a>
-                <a href="keshiys" title="呼吸内科医生" class="btn doctor">科室专家</a></li>
-
-            <li><i class="ico01"></i>
-                <div class="img animated"><img alt="神经内科" src="pic/pic_009.png" width="80" height="80"/></div>
-                <a href="Office-12" title="神经内科" class="office">神经内科</a>
-                <p>医院标题神经内科始建于1954年，经过半个多世纪的发展，目前已发展为全……</p>
-                <a href="Office-12" title="神经内科" class="btn more">查看详细</a>
-                <a href="ExpertInfo-12" title="神经内科医生" class="btn doctor">科室专家</a></li>
-
-            <li><i class="ico01"></i>
-                <div class="img animated"><img alt="内分泌科" src="pic/pic_008.png" width="80" height="80"/></div>
-                <a href="Office-4" title="内分泌科" class="office">内分泌科</a>
-                <p>医院标题内分泌代谢科，是国家重点专科、山西省重点专科、山西省糖尿病防治……</p>
-                <a href="Office-4" title="内分泌科" class="btn more">查看详细</a>
-                <a href="ExpertInfo-4" title="内分泌科医生" class="btn doctor">科室专家</a></li>
-
-            <li><i class="ico01"></i>
-                <div class="img animated"><img alt="神经内科康馨病房" src="pic/pic_012.png" width="80" height="80"/></div>
-                <a href="Office-57" title="神经内科康馨病房" class="office">神经内科康馨病房</a>
-                <p>医院标题神经内科康馨病房为国家临床重点专科神经内科干部保健病房，成立于……</p>
-                <a href="Office-57" title="神经内科康馨病房" class="btn more">查看详细</a>
-                <a href="ExpertInfo-57" title="神经内科康馨病房医生" class="btn doctor">科室专家</a></li>
-
-            <li><i class="ico01"></i>
-                <div class="img animated"><img alt="心内科" src="pic/pic_010.png" width="80" height="80"/></div>
-                <a href="Office-8" title="心内科" class="office">心内科</a>
-                <p>医院标题心血管内科是国家级临床重点专科、山西临床重点专科、山西省心血管……</p>
-                <a href="Office-8" title="心内科" class="btn more">查看详细</a>
-                <a href="ExpertInfo-8" title="心内科医生" class="btn doctor">科室专家</a></li>
-
-            <li><i class="ico01"></i>
-                <div class="img animated"><img alt="肾病风湿免疫科" src="pic/pic_013.png" width="80" height="80"/></div>
-                <a href="Office-6" title="肾病风湿免疫科" class="office">肾病风湿免疫科</a>
-                <p>医院标题肾病风湿免疫科成立于1985年，由肾病专业及风湿病专业组成，是……</p>
-                <a href="Office-6" title="肾病风湿免疫科" class="btn more">查看详细</a>
-                <a href="ExpertInfo-6" title="肾病风湿免疫科医生" class="btn doctor">科室专家</a></li>
-
-            <li><i class="ico01"></i>
-                <div class="img animated"><img alt="呼吸内科康馨病房" src="pic/pic_012.png" width="80" height="80"/></div>
-                <a href="Office-101" title="呼吸内科康馨病房" class="office">呼吸内科康馨病房</a>
-                <p>医院标题呼吸与危重症医学科康馨病房为国家临床重点专科呼吸与危重症医学科……</p>
-                <a href="Office-101" title="呼吸内科康馨病房" class="btn more">查看详细</a>
-                <a href="ExpertInfo-101" title="呼吸内科康馨病房医生" class="btn doctor">科室专家</a></li>
-
-            <li><i class="ico01"></i>
-                <div class="img animated"><img alt="心外科" src="pic/pic_010.png" width="80" height="80"/></div>
-                <a href="Office-33" title="心外科" class="office">心外科</a>
-                <p>医院标题、山西省心血管病医院心血管外科是国家临床重点专科之一，是省内综……</p>
-                <a href="Office-33" title="心外科" class="btn more">查看详细</a>
-                <a href="ExpertInfo-33" title="心外科医生" class="btn doctor">科室专家</a></li>
-
-            <li><i class="ico01"></i>
-                <div class="img animated"><img alt="山西省立眼科医院" src="pic/pic_011.png" width="80" height="80"/></div>
-                <a href="Office-30" title="山西省立眼科医院" class="office">山西省立眼科医院</a>
-                <p>山西省眼科研究所于1962年经山西省人民政府批准正式成立，是国内最早集眼科临……</p>
-                <a href="Office-30" title="山西省立眼科医院" class="btn more">查看详细</a>
-                <a href="ExpertInfo-30" title="山西省立眼科医院医生" class="btn doctor">科室专家</a></li>
+                <a href="keshiys" title="呼吸内科医生" class="btn doctor">科室专家</a></li>-->
 
         </ul>
         <div class="hackR"></div>

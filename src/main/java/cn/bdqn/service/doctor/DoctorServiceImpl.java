@@ -22,4 +22,8 @@ public class DoctorServiceImpl implements DoctorService {
         return doctorMapper.findByIdDoctor(did);
     }
 
+    @Override
+    public List<Doctor> findListByKId(Integer kId) {
+        return doctorMapper.findListByKId(kId);
+    }
 }

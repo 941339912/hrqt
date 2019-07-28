@@ -6,7 +6,7 @@ public class Koffice {
   private long id;
   private String kName;
   private String resume;
-  private long dId;
+  private long medicalId;
   private long isEmphasis;
   private long status;
   private String remark;
@@ -39,12 +39,12 @@ public class Koffice {
   }
 
 
-  public long getDId() {
-    return dId;
+  public long getMedicalId() {
+    return medicalId;
   }
 
-  public void setDId(long dId) {
-    this.dId = dId;
+  public void setMedicalId(long medicalId) {
+    this.medicalId = medicalId;
   }
 
 

@@ -18,4 +18,11 @@ public interface DoctorService {
      * @return
      */
     public Doctor getByIdDoctor(int did);
+
+    /**
+     * 根据科室查询医生
+     * @param kId
+     * @return
+     */
+    public List<Doctor> findListByKId(Integer kId);
 }
