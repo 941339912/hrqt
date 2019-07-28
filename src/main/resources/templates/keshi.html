@@ -565,8 +565,8 @@
                    <h3 th:text="${o.kName}"></h3>
                    <p style="display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;" th:text="${o.resume}"></p>
                    <div>
-                       <a class="coffee" href="keshimx" th:title="${o.kName}">查看详细</a>
-                       <a class='green' href='keshiys'th:title="${o.kName}">科室医生</a>
+                       <a class="coffee" th:href="@{kofficeById(id=${o.id})}" th:title="${o.kName}">查看详细</a>
+                       <a class='green' th:href='@{doctorByKId(id=${o.id})}'th:title="${o.kName}">科室医生</a>
                    </div>
                </li>
                </ul>

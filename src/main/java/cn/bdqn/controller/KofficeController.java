@@ -51,7 +51,7 @@ public class KofficeController {
     }
 
     @RequestMapping("/officeList")
-    public String officeList(Integer id, Model model){
+    public String officeList(Model model){
         List<Koffice> officeList = kofficeService.findOfficeList();
         List<Medical> medicalList = medicalService.findMedicalList();
         model.addAttribute("officeList",officeList);
