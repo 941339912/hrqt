@@ -18,5 +18,5 @@ public interface KofficeMapper {
      * @param kId
      * @return
      */
-    public Koffice findKofficeById(@Param("kId") Integer kId);
+    public Koffice findKofficeById(Integer kId);
 }

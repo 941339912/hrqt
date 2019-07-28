@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import java.util.List;
 
-@Service("kOfficeService")
+@Service
 public class KofficeServiceImpl implements KofficeService {
 
     @Resource
