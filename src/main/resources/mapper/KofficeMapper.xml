@@ -7,12 +7,21 @@
     <select id="findEmphasisList" resultType="Koffice">
         select id, kName,resume,isEmphasis,status,remark, medicalId
         from koffice
+        where isEmphasis = 1 and status = 1
     </select>
 
-    <select id="findKofficeById" resultType="Koffice" parameterType="int">
+    <select id="findKofficeById" resultType="Koffice">
         select id, kName,resume,isEmphasis,status,remark, medicalId
         from koffice
-        where id = #{kId}
+        where id = #{kId} and status = 1
     </select>
+
+    <!-- 查询所有科室 -->
+    <select id="findOfficeList" resultType="Koffice">
+        select id,isEmphasis,kName,medicalId,remark,resume,status
+        from koffice
+        where status = 1
+    </select>
+
 
 </mapper>

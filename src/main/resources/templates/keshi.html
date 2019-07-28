@@ -1,6 +1,5 @@
-
 <!DOCTYPE html>
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<html xmlns:th="http://www.thymeleaf.org"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="renderer" content="webkit" /><meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <title>科室导航 - 就诊指南 - 医院标题</title>
 <meta name="Keywords" content="医院标题,人民医院,省医,山西人民医院,咨询, 留言, 山西医院, 寻医问药" />
@@ -547,84 +546,23 @@
          </div>
         <div class="part">
         
-              <div class="part01" id="Department1">
-            	<div class="partTitle"><div class="left">内科临床医学部</div><div class="right"><a class='green' href='DutyTime-1'>出诊安排</a></div></div>
+              <div th:each="m:${medicalList}" class="part01" id="Department1">
+            	<div class="partTitle"><div class="left" th:text="${m.name}"></div>
+                    <div class="right"><a class='green' href='DutyTime-1'>出诊安排</a></div>
+                </div>
                <ul>
-			   <li>
-      <span class='import1'></span><h3>呼吸内科</h3><p>我科始建于上世纪70年代初，目前为卫生部国家重点专科建设项目单位，山西省重点……</p><div><a class="coffee" href="keshimx" title="呼吸内科">查看详细</a><a class='green' href='keshiys' title='呼吸内科医生'>科室医生</a></div>
-                 </li>
-				<li>
-      <span class='import1'></span><h3>呼吸内科</h3><p>我科始建于上世纪70年代初，目前为卫生部国家重点专科建设项目单位，山西省重点……</p><div><a class="coffee" href="keshimx" title="呼吸内科">查看详细</a><a class='green' href='keshiys' title='呼吸内科医生'>科室医生</a></div>
-                 </li><li>
-      <span class='import1'></span><h3>呼吸内科</h3><p>我科始建于上世纪70年代初，目前为卫生部国家重点专科建设项目单位，山西省重点……</p><div><a class="coffee" href="keshimx" title="呼吸内科">查看详细</a><a class='green' href='keshiys' title='呼吸内科医生'>科室医生</a></div>
-                 </li><li>
-      <span class='import1'></span><h3>呼吸内科</h3><p>我科始建于上世纪70年代初，目前为卫生部国家重点专科建设项目单位，山西省重点……</p><div><a class="coffee" href="keshimx" title="呼吸内科">查看详细</a><a class='green' href='keshiys' title='呼吸内科医生'>科室医生</a></div>
-                 </li><li>
-      <span class='import1'></span><h3>呼吸内科</h3><p>我科始建于上世纪70年代初，目前为卫生部国家重点专科建设项目单位，山西省重点……</p><div><a class="coffee" href="keshimx" title="呼吸内科">查看详细</a><a class='green' href='keshiys' title='呼吸内科医生'>科室医生</a></div>
-                 </li><li>
-      <span class='import1'></span><h3>呼吸内科</h3><p>我科始建于上世纪70年代初，目前为卫生部国家重点专科建设项目单位，山西省重点……</p><div><a class="coffee" href="keshimx" title="呼吸内科">查看详细</a><a class='green' href='keshiys' title='呼吸内科医生'>科室医生</a></div>
-                 </li><li>
-      <span class='import1'></span><h3>呼吸内科</h3><p>我科始建于上世纪70年代初，目前为卫生部国家重点专科建设项目单位，山西省重点……</p><div><a class="coffee" href="keshimx" title="呼吸内科">查看详细</a><a class='green' href='keshiys' title='呼吸内科医生'>科室医生</a></div>
-                 </li><li>
-      <span class='import1'></span><h3>呼吸内科</h3><p>我科始建于上世纪70年代初，目前为卫生部国家重点专科建设项目单位，山西省重点……</p><div><a class="coffee" href="keshimx" title="呼吸内科">查看详细</a><a class='green' href='keshiys' title='呼吸内科医生'>科室医生</a></div>
-                 </li><li>
-      <span class='import1'></span><h3>呼吸内科</h3><p>我科始建于上世纪70年代初，目前为卫生部国家重点专科建设项目单位，山西省重点……</p><div><a class="coffee" href="keshimx" title="呼吸内科">查看详细</a><a class='green' href='keshiys' title='呼吸内科医生'>科室医生</a></div>
-                 </li> </ul>
+			   <li th:each="o:${officeList}" th:if="${o.medicalId == m.id}">
+                   <span class='import1'></span>
+                   <h3 th:text="${o.kName}"></h3>
+                   <p style="display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;" th:text="${o.resume}"></p>
+                   <div>
+                       <a class="coffee" href="keshimx" th:title="${o.kName}">查看详细</a>
+                       <a class='green' href='keshiys'th:title="${o.kName}">科室医生</a>
+                   </div>
+               </li>
+               </ul>
                <div class="clear"></div>
             </div>
-              
-              <div class="part01" id="Department1">
-            	<div class="partTitle"><div class="left">内科临床医学部</div><div class="right"><a class='green' href='DutyTime-1'>出诊安排</a></div></div>
-               <ul>
-			   <li>
-      <span class='import1'></span><h3>呼吸内科</h3><p>我科始建于上世纪70年代初，目前为卫生部国家重点专科建设项目单位，山西省重点……</p><div><a class="coffee" href="keshimx" title="呼吸内科">查看详细</a><a class='green' href='keshiys' title='呼吸内科医生'>科室医生</a></div>
-                 </li>
-				<li>
-      <span class='import1'></span><h3>呼吸内科</h3><p>我科始建于上世纪70年代初，目前为卫生部国家重点专科建设项目单位，山西省重点……</p><div><a class="coffee" href="keshimx" title="呼吸内科">查看详细</a><a class='green' href='keshiys' title='呼吸内科医生'>科室医生</a></div>
-                 </li><li>
-      <span class='import1'></span><h3>呼吸内科</h3><p>我科始建于上世纪70年代初，目前为卫生部国家重点专科建设项目单位，山西省重点……</p><div><a class="coffee" href="keshimx" title="呼吸内科">查看详细</a><a class='green' href='keshiys' title='呼吸内科医生'>科室医生</a></div>
-                 </li><li>
-      <span class='import1'></span><h3>呼吸内科</h3><p>我科始建于上世纪70年代初，目前为卫生部国家重点专科建设项目单位，山西省重点……</p><div><a class="coffee" href="keshimx" title="呼吸内科">查看详细</a><a class='green' href='keshiys' title='呼吸内科医生'>科室医生</a></div>
-                 </li><li>
-      <span class='import1'></span><h3>呼吸内科</h3><p>我科始建于上世纪70年代初，目前为卫生部国家重点专科建设项目单位，山西省重点……</p><div><a class="coffee" href="keshimx" title="呼吸内科">查看详细</a><a class='green' href='keshiys' title='呼吸内科医生'>科室医生</a></div>
-                 </li><li>
-      <span class='import1'></span><h3>呼吸内科</h3><p>我科始建于上世纪70年代初，目前为卫生部国家重点专科建设项目单位，山西省重点……</p><div><a class="coffee" href="keshimx" title="呼吸内科">查看详细</a><a class='green' href='keshiys' title='呼吸内科医生'>科室医生</a></div>
-                 </li><li>
-      <span class='import1'></span><h3>呼吸内科</h3><p>我科始建于上世纪70年代初，目前为卫生部国家重点专科建设项目单位，山西省重点……</p><div><a class="coffee" href="keshimx" title="呼吸内科">查看详细</a><a class='green' href='keshiys' title='呼吸内科医生'>科室医生</a></div>
-                 </li><li>
-      <span class='import1'></span><h3>呼吸内科</h3><p>我科始建于上世纪70年代初，目前为卫生部国家重点专科建设项目单位，山西省重点……</p><div><a class="coffee" href="keshimx" title="呼吸内科">查看详细</a><a class='green' href='keshiys' title='呼吸内科医生'>科室医生</a></div>
-                 </li><li>
-      <span class='import1'></span><h3>呼吸内科</h3><p>我科始建于上世纪70年代初，目前为卫生部国家重点专科建设项目单位，山西省重点……</p><div><a class="coffee" href="keshimx" title="呼吸内科">查看详细</a><a class='green' href='keshiys' title='呼吸内科医生'>科室医生</a></div>
-                 </li> </ul>
-               <div class="clear"></div>
-            </div>
-			
-			<div class="part01" id="Department1">
-            	<div class="partTitle"><div class="left">内科临床医学部</div><div class="right"><a class='green' href='DutyTime-1'>出诊安排</a></div></div>
-               <ul>
-			   <li>
-      <span class='import1'></span><h3>呼吸内科</h3><p>我科始建于上世纪70年代初，目前为卫生部国家重点专科建设项目单位，山西省重点……</p><div><a class="coffee" href="keshimx" title="呼吸内科">查看详细</a><a class='green' href='keshiys' title='呼吸内科医生'>科室医生</a></div>
-                 </li>
-				<li>
-      <span class='import1'></span><h3>呼吸内科</h3><p>我科始建于上世纪70年代初，目前为卫生部国家重点专科建设项目单位，山西省重点……</p><div><a class="coffee" href="keshimx" title="呼吸内科">查看详细</a><a class='green' href='keshiys' title='呼吸内科医生'>科室医生</a></div>
-                 </li><li>
-      <span class='import1'></span><h3>呼吸内科</h3><p>我科始建于上世纪70年代初，目前为卫生部国家重点专科建设项目单位，山西省重点……</p><div><a class="coffee" href="keshimx" title="呼吸内科">查看详细</a><a class='green' href='keshiys' title='呼吸内科医生'>科室医生</a></div>
-                 </li><li>
-      <span class='import1'></span><h3>呼吸内科</h3><p>我科始建于上世纪70年代初，目前为卫生部国家重点专科建设项目单位，山西省重点……</p><div><a class="coffee" href="keshimx" title="呼吸内科">查看详细</a><a class='green' href='keshiys' title='呼吸内科医生'>科室医生</a></div>
-                 </li><li>
-      <span class='import1'></span><h3>呼吸内科</h3><p>我科始建于上世纪70年代初，目前为卫生部国家重点专科建设项目单位，山西省重点……</p><div><a class="coffee" href="keshimx" title="呼吸内科">查看详细</a><a class='green' href='keshiys' title='呼吸内科医生'>科室医生</a></div>
-                 </li><li>
-      <span class='import1'></span><h3>呼吸内科</h3><p>我科始建于上世纪70年代初，目前为卫生部国家重点专科建设项目单位，山西省重点……</p><div><a class="coffee" href="keshimx" title="呼吸内科">查看详细</a><a class='green' href='keshiys' title='呼吸内科医生'>科室医生</a></div>
-                 </li><li>
-      <span class='import1'></span><h3>呼吸内科</h3><p>我科始建于上世纪70年代初，目前为卫生部国家重点专科建设项目单位，山西省重点……</p><div><a class="coffee" href="keshimx" title="呼吸内科">查看详细</a><a class='green' href='keshiys' title='呼吸内科医生'>科室医生</a></div>
-                 </li><li>
-      <span class='import1'></span><h3>呼吸内科</h3><p>我科始建于上世纪70年代初，目前为卫生部国家重点专科建设项目单位，山西省重点……</p><div><a class="coffee" href="keshimx" title="呼吸内科">查看详细</a><a class='green' href='keshiys' title='呼吸内科医生'>科室医生</a></div>
-                 </li><li>
-      <span class='import1'></span><h3>呼吸内科</h3><p>我科始建于上世纪70年代初，目前为卫生部国家重点专科建设项目单位，山西省重点……</p><div><a class="coffee" href="keshimx" title="呼吸内科">查看详细</a><a class='green' href='keshiys' title='呼吸内科医生'>科室医生</a></div>
-                 </li> </ul>
-               <div class="clear"></div>
-            </div>
-              
         </div>
     </div>
     <div class="clear"></div>

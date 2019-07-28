@@ -19,4 +19,10 @@ public interface KofficeService {
      * @return
      */
     public Koffice findKofficeById(Integer kId);
+
+    /**
+     * 获取所有科室
+     * @return
+     */
+    public List<Koffice> findOfficeList();
 }

@@ -2,8 +2,10 @@ package cn.bdqn.controller;
 
 import cn.bdqn.entity.Doctor;
 import cn.bdqn.entity.Koffice;
+import cn.bdqn.entity.Medical;
 import cn.bdqn.service.doctor.DoctorService;
 import cn.bdqn.service.koffice.KofficeService;
+import cn.bdqn.service.koffice.MedicalService;
 import com.alibaba.fastjson.JSON;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,6 +23,8 @@ public class KofficeController {
     private KofficeService kofficeService;
     @Resource
     private DoctorService doctorService;
+    @Resource
+    private MedicalService medicalService;
 
     @RequestMapping("/emphasisKoffice")
     @ResponseBody
@@ -42,7 +46,16 @@ public class KofficeController {
     public String doctorByKId(Integer id, Model model){
         List<Doctor> list = doctorService.findListByKId(id);
         model.addAttribute("doctorList",list);
+        model.addAttribute("kName",list.get(0).getkName());
         return "keshiys";
     }
 
+    @RequestMapping("/officeList")
+    public String officeList(Integer id, Model model){
+        List<Koffice> officeList = kofficeService.findOfficeList();
+        List<Medical> medicalList = medicalService.findMedicalList();
+        model.addAttribute("officeList",officeList);
+        model.addAttribute("medicalList",medicalList);
+        return "keshi";
+    }
 }

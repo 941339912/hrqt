@@ -10,7 +10,23 @@ public class Koffice {
   private long isEmphasis;
   private long status;
   private String remark;
+  private String medicalName;
 
+  public String getkName() {
+    return kName;
+  }
+
+  public void setkName(String kName) {
+    this.kName = kName;
+  }
+
+  public String getMedicalName() {
+    return medicalName;
+  }
+
+  public void setMedicalName(String medicalName) {
+    this.medicalName = medicalName;
+  }
 
   public long getId() {
     return id;

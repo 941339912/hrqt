@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import java.util.List;
 
-@Service
+@Service("kOfficeService")
 public class KofficeServiceImpl implements KofficeService {
 
     @Resource
@@ -22,4 +22,10 @@ public class KofficeServiceImpl implements KofficeService {
     public Koffice findKofficeById(Integer kId) {
         return kofficeMapper.findKofficeById(kId);
     }
+
+    @Override
+    public List<Koffice> findOfficeList() {
+        return kofficeMapper.findOfficeList();
+    }
+
 }
