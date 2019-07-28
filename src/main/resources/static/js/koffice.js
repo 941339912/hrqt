@@ -1,5 +1,6 @@
 $(function () {
 
+    //单击科室简介
     $("#officejianjie").click(function () {
         alert("aaaa");
         $(".doctorList").load("officejianjie.html .doctorRight");
