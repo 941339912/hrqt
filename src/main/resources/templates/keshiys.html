@@ -552,7 +552,7 @@
                         <a href="ys" target="_blank" title="医生" class="ATitle" th:text="${d.dName}"></a>
                         <h4 th:text="${d.postion}"></h4>
                         <p th:text="${d.graduate}"></p>
-                        <div><a class="coffee" target="_blank" href="ys">详细</a>
+                        <div><a class="coffee" th:href="@{ys(did=${d.id})}">详细</a>
                             <a class="green" href="#" target="_blank">预约</a></div></li>
 
                 </ul>

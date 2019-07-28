@@ -530,7 +530,7 @@
     </div>
     <div class="doctorRight">
     	<div class='import import1'></div>
-        <div class="title01"><h3>所在科室：</h3><h1 th:text="${doctor.kName}"></h1><span><a href="#" th:title="${doctor.kName}">进入科室</a></span></div>
+        <div class="title01"><h3>所在科室：</h3><h1 th:text="${doctor.kName}"></h1><span><a th:href="@{kofficeById(id=${doctor.kId})}" th:title="${doctor.kName}">进入科室</a></span></div>
         <div class="clear"></div>
         <div id="DIVContent" class="article intro"><p style="text-align:left;">
 	<span style="font-family:'Tahoma';color:#121212;font-size:9pt;" th:text="${doctor.dName}+','+${doctor.kName}+${doctor.postion}"><span></span></span><span style="color:#121212;font-family:Tahoma;font-size:9pt;line-height:1.5;" th:text="${doctor.resume}"></span>

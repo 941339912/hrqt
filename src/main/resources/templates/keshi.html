@@ -540,12 +540,21 @@
     </div>
        <div class="baseRight">
     	<div class="title01">科室导航</div>
-        <div class="partChoice">
+        <!--<div class="partChoice">
         	<h1>快速进入科室</h1>
             <p>请先选择科室所在的医学部然后选择科室名称，即可快速进入您要去的科室。</p>
-         </div>
+           &lt;!&ndash; <form>
+                <select name="medical" id="ddlDepartment">
+                    <option value="0">请选择部门</option>
+                    <option th:each="m:${medicalList}" th:value="${m.id}" th:text="${m.name}"></option>
+                </select>
+                <select name="office" id="ddlOffices">
+                    <option th:each="o:${officeList}" th:if="${o.medicalId=m.id}" th:value="${o.id}" th:text="${o.kName}"></option>
+                </select>
+                <input type="button" id="GoToOffice" class="animated" value="进入科室">
+            </form>&ndash;&gt;
+         </div>-->
         <div class="part">
-        
               <div th:each="m:${medicalList}" class="part01" id="Department1">
             	<div class="partTitle"><div class="left" th:text="${m.name}"></div>
                     <div class="right"><a class='green' href='DutyTime-1'>出诊安排</a></div>
