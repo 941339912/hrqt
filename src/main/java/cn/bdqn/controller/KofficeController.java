@@ -39,14 +39,14 @@ public class KofficeController {
         return JSON.toJSONString(list);
     }
 
-    @RequestMapping("/kofficeById")
+/*    @RequestMapping("/kofficeById")
     public String getKofficeById(Integer id, Model model){
         Koffice koffice = kofficeService.findKofficeById(id);
         List<Doctor> list = doctorService.findListByKId(id);
         model.addAttribute("doctorList",list);
         model.addAttribute("koffice",koffice);
         return "keshimx";
-    }
+    }*/
 
     @RequestMapping("/doctorByKId")
     public String doctorByKId(Integer id, Model model){
@@ -56,14 +56,14 @@ public class KofficeController {
         return "keshiys";
     }
 
-    /*@RequestMapping("/officeList")
+    @RequestMapping("/officeList")
     public String officeList(Model model) {
         List<Koffice> officeList = kofficeService.findOfficeList();
         List<Medical> medicalList = medicalService.findMedicalList();
         model.addAttribute("officeList", officeList);
         model.addAttribute("medicalList", medicalList);
         return "keshi";
-    }*/
+    }
     /**
          * 医药部下拉框
          * @param map
@@ -86,6 +86,14 @@ public class KofficeController {
         map.put("doctors",doctors);
         return JSON.toJSONString(map);
     }
+
+    @RequestMapping(value = "/department",method = RequestMethod.POST)
+    @ResponseBody
+    public String department(String medicalId,Map<String,Object> map){
+        List<Koffice> koffices=kofficeService.selectKoffices(Long.parseLong(medicalId));
+        map.put("koffices",koffices);
+        return JSON.toJSONString(map);
+    }
 }
 
 //*****原科室导航
@@ -97,13 +105,7 @@ public class KofficeController {
 //        return JSON.toJSONString(map);
 //    }
 //
-//    @RequestMapping(value = "/department",method = RequestMethod.POST)
-//    @ResponseBody
-//    public String department(String medicalId,Map<String,Object> map){
-//        List<Koffice> koffices=kofficeService.selectKoffices(Long.parseLong(medicalId));
-//        map.put("koffices",koffices);
-//        return JSON.toJSONString(map);
-//    }
+
 //
 //    @RequestMapping(value = "/doctor",method = RequestMethod.POST)
 //    @ResponseBody
