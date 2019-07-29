@@ -11,7 +11,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-
 import javax.annotation.Resource;
 import java.util.List;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -39,14 +38,14 @@ public class KofficeController {
         return JSON.toJSONString(list);
     }
 
-/*    @RequestMapping("/kofficeById")
+    @RequestMapping("/kofficeById")
     public String getKofficeById(Integer id, Model model){
         Koffice koffice = kofficeService.findKofficeById(id);
         List<Doctor> list = doctorService.findListByKId(id);
         model.addAttribute("doctorList",list);
         model.addAttribute("koffice",koffice);
         return "keshimx";
-    }*/
+    }
 
     @RequestMapping("/doctorByKId")
     public String doctorByKId(Integer id, Model model){
@@ -95,22 +94,3 @@ public class KofficeController {
         return JSON.toJSONString(map);
     }
 }
-
-//*****原科室导航
-//    @RequestMapping(value = "/navigation/{id}",method = RequestMethod.POST)
-//    @ResponseBody
-//    public String navigation(@PathVariable("id") Long id, Map<String,Object> map){
-//        List<Medical> medicals=medicalService.selectMedicals(id);
-//        map.put("medicals",medicals);
-//        return JSON.toJSONString(map);
-//    }
-//
-
-//
-//    @RequestMapping(value = "/doctor",method = RequestMethod.POST)
-//    @ResponseBody
-//    public String doctor(String kId,Map<String,Object> map){
-//        List<Doctor> doctors=doctorService.selectDoctors(Long.parseLong(kId));
-//        map.put("doctors",doctors);
-//        return JSON.toJSONString(map);
-//    }
