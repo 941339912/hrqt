@@ -71,17 +71,11 @@ public class KofficeController {
          */
     @RequestMapping(value = "/navigation/{id}",method = RequestMethod.POST)
     @ResponseBody
-    public String navigation(@PathVariable("id") Long id, Map<String,Object> map){
+    public String navigation(@PathVariable("id") Long id, Long medicalId,Map<String,Object> map){
         List<Medical> medicals=medicalService.selectMedicals(id);
-        map.put("medicals",medicals);
-        return JSON.toJSONString(map);
-    }
-
-    @RequestMapping(value = "/department",method = RequestMethod.POST)
-    @ResponseBody
-    public String department(String medicalId,Map<String,Object> map){
-        List<Koffice> koffices=kofficeService.selectKoffices(Long.parseLong(medicalId));
+        List<Koffice> koffices=kofficeService.selectKoffices(medicalId);
         map.put("koffices",koffices);
+        map.put("medicals",medicals);
         return JSON.toJSONString(map);
     }
 
@@ -93,3 +87,28 @@ public class KofficeController {
         return JSON.toJSONString(map);
     }
 }
+
+//*****原科室导航
+//    @RequestMapping(value = "/navigation/{id}",method = RequestMethod.POST)
+//    @ResponseBody
+//    public String navigation(@PathVariable("id") Long id, Map<String,Object> map){
+//        List<Medical> medicals=medicalService.selectMedicals(id);
+//        map.put("medicals",medicals);
+//        return JSON.toJSONString(map);
+//    }
+//
+//    @RequestMapping(value = "/department",method = RequestMethod.POST)
+//    @ResponseBody
+//    public String department(String medicalId,Map<String,Object> map){
+//        List<Koffice> koffices=kofficeService.selectKoffices(Long.parseLong(medicalId));
+//        map.put("koffices",koffices);
+//        return JSON.toJSONString(map);
+//    }
+//
+//    @RequestMapping(value = "/doctor",method = RequestMethod.POST)
+//    @ResponseBody
+//    public String doctor(String kId,Map<String,Object> map){
+//        List<Doctor> doctors=doctorService.selectDoctors(Long.parseLong(kId));
+//        map.put("doctors",doctors);
+//        return JSON.toJSONString(map);
+//    }

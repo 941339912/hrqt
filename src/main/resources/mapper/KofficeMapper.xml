@@ -3,7 +3,13 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.bdqn.dao.KofficeMapper">
     <select id="selectKoffices" resultType="Koffice">
-        select id, kName, resume, isEmphasis, status, remark, medicalId from koffice where medicalId=#{medicalId}
+        select id, kName, resume, isEmphasis, status, remark, medicalId
+        from koffice
+        <where>
+            <if test="medicalId !=0">
+                medicalId=#{medicalId}
+            </if>
+        </where>
     </select>
 
 
