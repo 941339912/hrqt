@@ -72,6 +72,11 @@
             <!--            <systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/CCP_REST_SMS_SDK_JAVA_v2.6.3r.jar</systemPath>-->
             <systemPath>${project.basedir}/src/main/lib/CCP_REST_SMS_SDK_JAVA_v2.6.3r.jar</systemPath>
         </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>5.1.8.RELEASE</version>
+        </dependency>
     </dependencies>
 
     <build>

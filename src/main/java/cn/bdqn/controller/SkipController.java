@@ -90,4 +90,10 @@ public class SkipController {
     public String regist(){
         return "register";
     }
+
+    //头部
+    @RequestMapping("header")
+    public String header(){
+        return "header";
+    }
 }

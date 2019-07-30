@@ -6,9 +6,9 @@ $(function () {
     //     $(".doctorList").load("officejianjie.html .doctorRight");
     // });
     //单击科室简介
-    $("#officejianjie").click(function () {
+  /*  $("#officejianjie").click(function () {
         alert("aaaa");
-    });
+    });*/
 
 });
 

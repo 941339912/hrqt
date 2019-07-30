@@ -93,4 +93,14 @@ public class KofficeController {
         map.put("koffices",koffices);
         return JSON.toJSONString(map);
     }
+
+    /**
+     * 科室简介
+     */
+    @RequestMapping("/resume")
+    public String resume(Integer id,Model model){
+        Koffice koffice = kofficeService.findKofficeById(id);
+        model.addAttribute("office",koffice);
+        return "officejianjie";
+    }
 }

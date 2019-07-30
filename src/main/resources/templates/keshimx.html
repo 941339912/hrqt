@@ -552,7 +552,7 @@
 	<div class="introLeft">
     	<div class="lefttitle">科室栏目<span>Column sections</span></div>
         <ul>
-        	<li><a href="ysoffice">科室简介</a></li>
+        	<li><a th:href="@{resume(id=${koffice.id})}">科室简介</a></li>
             <li id="LIExpertInfo2"><a th:href="@{doctorByKId(id=${koffice.id})}">专家介绍</a></li>
             <li><a href='OfficeNewsList-11-1' title='工作动态'>工作动态</a></li><li><a href='OfficeNewsList-11-4' title='医疗设备'>医疗设备</a></li></ul><ul class='margRt'><li><a href='OfficeNewsList-11-2' title='健康教育'>健康教育</a></li>
         </ul>
