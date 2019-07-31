@@ -14,7 +14,6 @@ public class Doctor {
   private String postion;
   private String edcuation;
   private String graduate;
-  private String hospital;
   private String resume;
   private long kId;
   private long isExpert;
@@ -94,14 +93,6 @@ public class Doctor {
 
   public void setGraduate(String graduate) {
     this.graduate = graduate;
-  }
-
-  public String getHospital() {
-    return hospital;
-  }
-
-  public void setHospital(String hospital) {
-    this.hospital = hospital;
   }
 
   public String getResume() {

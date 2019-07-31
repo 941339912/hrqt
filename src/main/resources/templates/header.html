@@ -1,36 +1,41 @@
-<div class="topHidden"></div>
-<div class="toolBase">
-    <div class="BaseMark">
-        <!--            <ul>-->
-        <!--                <li class="first"><a href="SiteMap">站点地图</a></li>-->
-        <!--                <li><a href="Complain">院长(信访)信箱</a></li>-->
-        <!--                <li><a href="https://61.163.73.190/por/login_psw.csp" target="_blank">内部OA</a></li>-->
-        <!--                <li><a href="news">人才招聘</a></li>-->
-        <!--                <li><a href="Office-71">人事管理</a></li>-->
-        <!--                <li><a href="History">网上院史馆</a></li>-->
-        <!--                <li><a href="Message">在线留言</a></li>-->
-        <!--                <li><a href="javascript:;" onClick="Kunyi.AddFavorite(window.location,document.title)">加入收藏</a></li>-->
-        <!--            </ul>-->
-        <div class="index_dlzc">
-            <a href="login">登录</a>&nbsp;丨&nbsp;<a href="regist">注册</a>
+<html xmlns:th="http://www.thymeleaf.org">
+<header th:fragment="header">
+    <link rel="stylesheet" href="css/index.css" type="text/css"/>
+    <div class="topHidden"></div>
+    <div class="toolBase">
+        <div class="BaseMark">
+            <!--            <ul>-->
+            <!--                <li class="first"><a href="SiteMap">站点地图</a></li>-->
+            <!--                <li><a href="Complain">院长(信访)信箱</a></li>-->
+            <!--                <li><a href="https://61.163.73.190/por/login_psw.csp" target="_blank">内部OA</a></li>-->
+            <!--                <li><a href="news">人才招聘</a></li>-->
+            <!--                <li><a href="Office-71">人事管理</a></li>-->
+            <!--                <li><a href="History">网上院史馆</a></li>-->
+            <!--                <li><a href="Message">在线留言</a></li>-->
+            <!--                <li><a href="javascript:;" onClick="Kunyi.AddFavorite(window.location,document.title)">加入收藏</a></li>-->
+            <!--            </ul>-->
+            <div class="index_dlzc">
+                <a href="login">登录</a>&nbsp;丨&nbsp;<a href="regist">注册</a>
+            </div>
         </div>
     </div>
-</div>
-<div class="BaseMark logoBase"><a href="index"><img src="images/logo.jpg" class="load" width="227" height="75"/></a>
-    <div class="searchBase">
-        <div class="itemBase">
-            <div class="divType" data-state="0">全站内容</div>
-            <ul>
-                <li data-id="1">全站内容</li>
-                <li data-id="2">医生查找</li>
-                <li data-id="3">新闻动态</li>
-            </ul>
+    <div class="BaseMark logoBase"><a href="index"><img src="images/logo.jpg" class="load" width="227" height="75"/></a>
+        <div class="searchBase">
+            <div class="itemBase">
+                <div class="divType" data-state="0">全站内容</div>
+                <ul>
+                    <li data-id="1">全站内容</li>
+                    <li data-id="2">医生查找</li>
+                    <li data-id="3">新闻动态</li>
+                </ul>
+            </div>
+            <form method="get" action="Search" onSubmit="return Kunyi.CheckSearchForm()">
+                <input type="hidden" id="Type" name="Type" value="1"/>
+                <input type="text" name="SearchWords" placeholder="请输入您要查找内容的关键字" value="" autocomplete="off"
+                       onFocus="Kunyi.cls(event)" onBlur="Kunyi.res(event)" maxlength="28" id="SearchWords"/>
+                <input type="submit" value="搜索" class="boxsub animated"/>
+            </form>
         </div>
-        <form method="get" action="Search" onSubmit="return Kunyi.CheckSearchForm()">
-            <input type="hidden" id="Type" name="Type" value="1"/>
-            <input type="text" name="SearchWords" placeholder="请输入您要查找内容的关键字" value="" autocomplete="off"
-                   onFocus="Kunyi.cls(event)" onBlur="Kunyi.res(event)" maxlength="28" id="SearchWords"/>
-            <input type="submit" value="搜索" class="boxsub animated"/>
-        </form>
     </div>
-</div>
+</header>
+</html>

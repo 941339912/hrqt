@@ -5,7 +5,7 @@
 <!--    查询所有医生-->
     <select id="findQueryDoctor" resultType="Doctor" parameterType="String">
         SELECT 	d.id,d.dName,d.kId,d.dPinyin,d.birthDate,d.cyDate,d.eAddress,k.kName,d.postion,
-        d.edcuation,d.graduate,d.hospital,d.resume,d.isExpert,d.achievement,d.photopath,d.status,d.remark
+        d.edcuation,d.graduate,d.resume,d.isExpert,d.achievement,d.photopath,d.status,d.remark
         FROM doctor d
         JOIN koffice k ON d.kId=k.id
         <where>
@@ -19,10 +19,9 @@
         </where>
     </select>
 
-
     <select id="findByIdDoctor" resultType="Doctor" parameterType="int">
         SELECT 	d.id,d.kId,d.dName,d.dPinyin,d.birthDate,d.cyDate,d.eAddress,k.kName kName,d.postion,
-        d.edcuation,d.graduate,d.hospital,d.resume,d.isExpert,d.achievement,d.photopath,d.status,d.remark
+        d.edcuation,d.graduate,d.resume,d.isExpert,d.achievement,d.photopath,d.status,d.remark
         FROM doctor d
         JOIN koffice k ON d.kId=k.id
         WHERE d.id=#{did}
@@ -30,13 +29,13 @@
 
     <select id="findListByKId" resultType="Doctor" parameterType="int">
         SELECT d.id,d.kId,d.dName,d.dPinyin,d.birthDate,d.cyDate,d.eAddress,k.kName kName,d.postion,
-        d.edcuation,d.graduate,d.hospital,d.resume,d.isExpert,d.achievement,d.photopath,d.status,d.remark
+        d.edcuation,d.graduate,d.resume,d.isExpert,d.achievement,d.photopath,d.status,d.remark
         FROM doctor d
         JOIN koffice k ON d.kId=k.id
         WHERE k.id=#{kId}
     </select>
     <select id="selectDoctors" resultType="Doctor">
-        select id,dName,dPinyin,birthDate,cyDate,eAddress,postion,edcuation,graduate,hospital,
+        select id,dName,dPinyin,birthDate,cyDate,eAddress,postion,edcuation,graduate,
         resume,kId,isExpert,achievement,photopath,status,remark from doctor where kId=#{kId}
     </select>
 

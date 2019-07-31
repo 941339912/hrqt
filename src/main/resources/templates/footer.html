@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<footer th:fragment="footer">
+<img src="images/ico_036.png" width="35" class="load" height="18" id="QRMark"/>
+<div class="menusBase">
+    <div class="BaseMark">
+        <dl>
+            <dt><img src="images/ico_006.jpg" class="load" width="36" height="34"/><em>门诊服务</em><span>outpatient services</span>
+            </dt>
+            <dd><a href="NewsDetail-449" title="预约流程" target="_blank">预约流程</a></dd>
+            <dd><a href="NewsDetail-448" title="门诊须知" target="_blank">门诊须知</a></dd>
+            <dd><a href="Article-57" title="院内导航" target="_blank">院内导航</a></dd>
+        </dl>
+        <dl>
+            <dt><img src="images/ico_008.jpg" class="load" width="36" height="34"/><em>住院服务</em><span>hospitalized services</span>
+            </dt>
+            <dd><a href="Article-56" title="住院须知" target="_blank">住院须知</a></dd>
+            <dd><a href="NewsDetail-461" title="检查须知" target="_blank">检查须知</a></dd>
+            <dd><a href="Article-56" title="住院清单" target="_blank">住院清单</a></dd>
+        </dl>
+        <dl>
+            <dt><img src="images/ico_009.jpg" class="load" width="36" height="34"/><em>体检服务</em><span>examination services</span>
+            </dt>
+            <dd><a href="NewsDetail-461" title="体检须知" target="_blank">体检须知</a></dd>
+            <dd><a href="NewsDetail-7684" title="体检套餐查询" target="_blank">体检套餐查询</a></dd>
+            <dd><a href="CheckupsInfo" title="体检报告查询" target="_blank">体检报告查询</a></dd>
+        </dl>
+        <div class="QRBtn"><img src="images/tempQR.jpg" class="load" width="85" height="85"/> <span>扫描关注官方微信号</span>
+            <a href="javascript:void(0)" id="BtnQRMore">更多二维码</a></div>
+
+        <div class="newsPaper">
+            <div class="npTitle"><img src="images/ico_010.jpg" class="load" width="28"
+                                      height="39"/><em>省医院报</em><span>内部资料 仅供阅读</span></div>
+            <div class="DChange"><select class="DYear" id="ddlYears">
+                <option value="0">年份</option>
+                <option value="2017">2017年</option>
+                <option value="2016">2016年</option>
+                <option value="2015">2015年</option>
+                <option value="2014">2014年</option>
+            </select>
+                <select class="DTime" id="ddlTimes">
+                    <option value="0">期数</option>
+                </select></div>
+            <input class="newsPaperBtn animated" name="btnGoNewsPaper" id="btnGoNewsPaper" value="阅览"
+                   type="button"/>
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+
+<div class="BottomHidden"></div>
+<div class="DWeibo"><a href="javascript:;" class="weibo" title="新浪微博">新浪官方微博</a><a href="javascript:;"
+                                                                                   class="tencent" title="腾讯微博">腾讯官方微博</a>
+    <div class="clear"></div>
+</div>
+
+<div class="websiteInfo">
+    <div class="info">主办单位：医院标题 &nbsp; &nbsp;综合服务电话：120&nbsp;&nbsp; &nbsp;急救中心电话：120 &nbsp; 传真：120 &nbsp; 地 址：地址地址地址
+        &nbsp;<br/> 版权所有：医院标题
+    </div>
+    <ul>
+        <li class="first"><a href="jianjie" target="_blank">关于我们</a></li>
+        <li><a href="Declaration" target="_blank">法律声明</a></li>
+        <li><a href="SiteMap" target="_blank">网站地图</a></li>
+        <li><a href="Article-57" target="_blank">联系我们</a></li>
+        <li><a href="Complain" target="_blank">院长(信访)信箱</a></li>
+    </ul>
+    <div class="clear"></div>
+    <p> &copy;2015-
+        <script language="javascript" type="text/javascript">document.write(new Date().getFullYear());</script>
+        . All Rights Reserved. <a href="http://www.miitbeian.gov.cn/publish/query/indexFirst.action"
+                                  target="_blank">备案号0000001 </a></a></p>
+    <select id="ddlLinks">
+        <option value="0"><span>友情链接</span> HYPERLINK</option>
+        <option value="http://www.chinapop.gov.cn/">中华人民共和国卫生和计划生育委员会</option>
+    </select>
+</div>
+</footer>
+</html>
