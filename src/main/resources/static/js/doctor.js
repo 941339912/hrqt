@@ -7,9 +7,9 @@ $(function () {
         for (var i=0;i<doctorList.length;i++){
             $li = $("<li><a href=\"ys\" title=\""+doctorList[i].dName+"\" target=\"_blank\" class=\"img\"><img alt=\""+doctorList[i].dName+"\" title=\""+doctorList[i].dName+"\"\n" +
                 "src=\"doctorImages/"+doctorList[i].photopath+"\" width=\"120\" height=\"162\"/></a>\n" +
-                "<a href=\"ys\" title=\""+doctorList[i].dName+"\" target=\"_blank\" class=\"name\">"+doctorList[i].dName+"</a>\n" +
+                "<a href=\"ys?did="+doctorList[i].id+"\" title=\""+doctorList[i].dName+"\" target=\"_blank\" class=\"name\">"+doctorList[i].dName+"</a>\n" +
                 "<a href=\"keshi\" title=\""+doctorList[i].graduate+"\" target=\"_blank\" class=\"office\">"+doctorList[i].graduate+"</a>\n" +
-                "<a href=\"ys\" title=\""+doctorList[i].postion+"\" target=\"_blank\" class=\"post\">"+doctorList[i].postion+"</a>\n" +
+                "<a href=\"ys?did="+doctorList[i].id+"\" title=\""+doctorList[i].postion+"\" target=\"_blank\" class=\"post\">"+doctorList[i].postion+"</a>\n" +
                 "<a href=\"ys?did="+doctorList[i].id+"\" title=\"详细\" target=\"_blank\" class=\"btn more\">详细</a>\n" +
                 "<a href=\"#\" target=\"_blank\" class=\"btn date\">预约</a></li>");
             $ul.append($li);
@@ -28,10 +28,10 @@ $(function () {
             for (var i=0;i<doctorList.length;i++){
                 $li = $("<li><a href=\"ys\" title=\""+doctorList[i].dName+"\" target=\"_blank\" class=\"img\"><img alt=\""+doctorList[i].dName+"\" title=\""+doctorList[i].dName+"\"\n" +
                     "src=\"doctorImages/"+doctorList[i].photopath+"\" width=\"120\" height=\"162\"/></a>\n" +
-                    "<a href=\"ys\" title=\""+doctorList[i].dName+"\" target=\"_blank\" class=\"name\">"+doctorList[i].dName+"</a>\n" +
+                    "<a href=\"ys?did="+doctorList[i].id+"\" title=\""+doctorList[i].dName+"\" target=\"_blank\" class=\"name\">"+doctorList[i].dName+"</a>\n" +
                     "<a href=\"keshi\" title=\""+doctorList[i].graduate+"\" target=\"_blank\" class=\"office\">"+doctorList[i].graduate+"</a>\n" +
-                    "<a href=\"ys\" title=\""+doctorList[i].postion+"\" target=\"_blank\" class=\"post\">"+doctorList[i].postion+"</a>\n" +
-                    "<a href=\"ys\" title=\"详细\" target=\"_blank\" class=\"btn more\">详细</a>\n" +
+                    "<a href=\"ys?did="+doctorList[i].id+"\" title=\""+doctorList[i].postion+"\" target=\"_blank\" class=\"post\">"+doctorList[i].postion+"</a>\n" +
+                    "<a href=\"ys?did="+doctorList[i].id+"\" title=\"详细\" target=\"_blank\" class=\"btn more\">详细</a>\n" +
                     "<a href=\"#\" target=\"_blank\" class=\"btn date\">预约</a></li>");
                 $ul.append($li);
             }
@@ -58,10 +58,10 @@ $(function () {
             for (var i=0;i<doctorList.length;i++){
                 $li = $("<li><a href=\"ys\" title=\""+doctorList[i].dName+"\" target=\"_blank\" class=\"img\"><img alt=\""+doctorList[i].dName+"\" title=\""+doctorList[i].dName+"\"\n" +
                     "src=\"doctorImages/"+doctorList[i].photopath+"\" width=\"120\" height=\"162\"/></a>\n" +
-                    "<a href=\"ys\" title=\""+doctorList[i].dName+"\" target=\"_blank\" class=\"name\">"+doctorList[i].dName+"</a>\n" +
-                    "<a href=\"keshi\" title=\""+doctorList[i].graduate+"\" target=\"_blank\" class=\"office\">"+doctorList[i].graduate+"</a>\n" +
-                    "<a href=\"ys\" title=\""+doctorList[i].postion+"\" target=\"_blank\" class=\"post\">"+doctorList[i].postion+"</a>\n" +
-                    "<a href=\"ys\" title=\"详细\" target=\"_blank\" class=\"btn more\">详细</a>\n" +
+                    "<a href=\"ys?did="+doctorList[i].id+"\" title=\""+doctorList[i].dName+"\" target=\"_blank\" class=\"name\">"+doctorList[i].dName+"</a>\n" +
+                    "<a href=\"ys?did="+doctorList[i].id+"\" title=\""+doctorList[i].graduate+"\" target=\"_blank\" class=\"office\">"+doctorList[i].graduate+"</a>\n" +
+                    "<a href=\"ys?did="+doctorList[i].id+"\" title=\""+doctorList[i].postion+"\" target=\"_blank\" class=\"post\">"+doctorList[i].postion+"</a>\n" +
+                    "<a href=\"ys?did="+doctorList[i].id+"\" title=\"详细\" target=\"_blank\" class=\"btn more\">详细</a>\n" +
                     "<a href=\"#\" target=\"_blank\" class=\"btn date\">预约</a></li>");
                 $ul.append($li);
             }

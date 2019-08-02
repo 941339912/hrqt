@@ -1,5 +1,23 @@
 $(function () {
 
+    $("#OSearchSwitch").click(function () {
+
+        $.post("selectMedical",function (data) {
+            var medicalList = data.medicalList;
+            var officeList = data.officeList;
+            var $div = $(".OListBase");
+            for (var i = 0; i < medicalList.length; i++) {
+                var $chirend = $("<div class=\"OList\"><h6>"+medicalList[i].name+"</h6></div>");
+                    for (var j = 0; j < officeList.length; j++) {
+                        if (medicalList[i].id == officeList[j].medicalId) {
+                            var $item = $("<div class=\"item\"><span>> </span><a href=\"kofficeById?id="+officeList[j].id+"\">"+officeList[j].kName+"</a></div>");
+                            $chirend.append($item);
+                        }
+                    }
+                $div.append($chirend);
+            }
+        },"json");
+    });
 
 });
 
