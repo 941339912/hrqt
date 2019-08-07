@@ -70,6 +70,9 @@ $(function () {
 
     $("#zimuDel").click(function () {
         ziText = $("#zimuId").val();
+        $("#zimuId").blur(function () {
+            ziText = "";
+        });
         ziText=ziText.substring(0,ziText.length-1);
         $("#zimuId").val(ziText);
         if($("#zimuId").val()==""){
@@ -95,4 +98,5 @@ $(function () {
             }
         },"JSON");
     });
+
 })
