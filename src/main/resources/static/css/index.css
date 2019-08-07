@@ -142,7 +142,7 @@ nav .Inav{ width:938px;}
 .officesBase .hiddenLineR{right:0px;}
 .officesBase .hiddenLineL{left:-1px;}
 .officesBase .OFastSearch{ height:447px;}
-.officesBase .OFContent{width:100%; height:343px; position:absolute; top:91px; left:0px; overflow-y:hidden;-ms-overflow-y:hidden;overflow-x:scroll\9;-ms-overflow-x:scroll\9;}
+.officesBase .OFContent{width:100%; height:310px; position:absolute; top:91px; left:0px; overflow-y:hidden;-ms-overflow-y:hidden;overflow-x:scroll\9;-ms-overflow-x:scroll\9;}
 .officesBase .OListBase{ width:1440px;height:343px;position:absolute; top:0px; left:0px;}
 .officesBase .OList{ width:219px; height:288px; float:left; border-right:1px solid #eee; padding-left:20px; overflow:hidden;}
 .officesBase .OList h6{ padding-left:21px; font-size:16px; line-height:16px; color:#6bcbca; background:url(../images/ico_004.png) left 1px no-repeat; margin-bottom:24px;}

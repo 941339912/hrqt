@@ -64,6 +64,11 @@ public class SkipController {
 //        return "ys";
 //    }
 
+    @RequestMapping("/yuyuelist")
+    public String yuyuslist(){
+        return "yuyuelist";
+    }
+
     @RequestMapping("/zhuanjia")
     public String zhuanjia() {
         return "zhuanjia";
