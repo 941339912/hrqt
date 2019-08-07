@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -23,39 +23,47 @@
         <div class="layui-form layui-form-pane">
             <div class="layui-form">
                 <div class="layui-form-item">
+                    <input class="layui-input" id="userName" name="userName" placeholder="请输入用户名" type="text"
+                           maxlength="20" autocomplete="off" autofocus="autofocus">
+                </div>
+                <div class="layui-form-item">
+                    <input class="layui-input" id="password" name="password" type="password"
+                           maxlength="20" autocomplete="off">
+                </div>
+                <div class="layui-form-item">
+                    <input class="layui-input" id="password2" name="password2" placeholder="请再次输入密码" type="password"
+                           maxlength="20" autocomplete="off">
+                </div>
+                <div class="layui-form-item">
+                    <input class="layui-input" id="identityId" name="identityId" placeholder="请输入身份证" type="text"
+                           maxlength="20" autocomplete="off" pattern="">
+                </div>
+                <div class="layui-form-item">
                     <input class="layui-input" id="phone" name="phone" placeholder="请输入手机号" type="text" maxlength="11"
-                           lay-verify="required|phone|regexit" autofocus="autofocus" autocomplete="off">
-                </div>
-                <div class="layui-form-item">
-                    <input class="layui-input" id="password" name="password" placeholder="请输入密码" type="password"
-                           maxlength="20" lay-verify="required|pwd" autocomplete="off">
-                </div>
-                <div class="layui-form-item">
-                    <input class="layui-input" name="password2" placeholder="请再次输入密码" type="password" maxlength="20"
-                           lay-verify="required|rePwd" autocomplete="off">
+                           autocomplete="off">
                 </div>
                 <div class="layui-form-item form_code">
-                    <input id="code" class="layui-input" name="code" placeholder="请输入验证码" type="text" maxlength="6"
-                           lay-verify="required|code">
+                    <input id="msg_code" class="layui-input" name="msg_code" placeholder="请输入短信验证码" type="text"
+                           maxlength="6">
+                    <div class="code">
+                        <a id="getSmsCode" href="javascript:void(0)" class="layui-btn layui-btn-normal tel-btn"
+                           style="width: 120px;">获取验证码</a>
+                    </div>
+                </div>
+                <div class="layui-form-item form_code">
+                    <input id="code" class="layui-input" name="code" placeholder="请输入验证码" type="text" maxlength="6">
                     <!--							<div class="code"><img id="refCode_reg_img" width="120" height="38"></div>-->
                     <div class="code">
                         <input type="button" id="yzm" onclick="createCode()" value=""/>
                     </div>
                 </div>
-                <div class="layui-form-item form_code">
-                    <input id="msg-code" class="layui-input" name="msg_code" placeholder="请输入短信验证码" type="text"
-                           maxlength="6" lay-verify="required|number|msgcode">
-                    <div class="code">
-                        <a id="msg-btn" class="layui-btn layui-btn-normal tel-btn" style="width: 120px;">获取验证码</a>
-                    </div>
-                </div>
                 <div class="layui-form-item" style="float: left;margin-left: -10px;">
-                    <input lay-filter="agreen-checkbox" title="我同意" type="checkbox" lay-skin="primary">
+                    <input id="wty" lay-filter="agreen-checkbox" title="我同意" type="checkbox" lay-skin="primary">
                     <a href="#" target="_blank">《注册协议》</a>
                 </div>
                 <div class="layui-form-item">
-                    <button id="reg" type="submit" class="login_btn layui-btn layui-btn-radius layui-btn-normal"
-                            lay-submit lay-filter="register">立即注册
+                    <button id="reg" type="button" class="login_btn layui-btn layui-btn-radius layui-btn-normal"
+                            lay-submit lay-filter="register" onclick="jump()">立即注册
                     </button>
                 </div>
                 <div>
@@ -68,10 +76,8 @@
 </div>
 </body>
 
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<!--	<script type="text/javascript" src="js/jquery-1.12.4.js"></script>-->
+<!--	<script type="text/javascript" src="js/jquery.min.js"></script>-->
+<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
 <script type="text/javascript" src="layui/layui.all.js"></script>
 <script type="text/javascript" src="js/register.js"></script>
-<script type="text/javascript" src="js/yanzhengma.js"></script>
-
 </html>

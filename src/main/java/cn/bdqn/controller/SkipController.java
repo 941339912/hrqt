@@ -54,16 +54,6 @@ public class SkipController {
         return "kexuelist";
     }
 
-    @RequestMapping("/news")
-    public String news() {
-        return "news";
-    }
-
-    @RequestMapping("/newslist")
-    public String newslist() {
-        return "newslist";
-    }
-
     @RequestMapping("/rongyu")
     public String rongyu() {
         return "rongyu";

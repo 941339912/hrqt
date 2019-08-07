@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>预约挂号页面</title>
+    <meta name="Keywords" content="医院标题,人民医院,省医,山西人民医院,咨询, 留言, 山西医院, 寻医问药"/>
+    <meta name="Description"
+          content="医院标题位于山西省太原市，建院于1906年，是一家三级甲等综合医院。医院秉承“患者至上，员工为本”的服务理念，弘扬“仁爱、博学、严谨、卓越”的医院精神，坚持“人民医院为人民”的办院宗旨，造就了一支业务精湛、医德高尚、纪律严明、作风过硬的职工队伍，树立了社会满意、患者信赖的良好形象。先后获得全国精神文明建设先进单位、全国文明单位、全国卫生系统先进集体、全国医院文化建设先进单位等多项荣誉称号。"/>
+    <meta name="robots" content="All"/>
+    <noscript>
+        <meta http-equiv="refresh" content="0; url=/noscript.htm"/>
+    </noscript>
+    <!--[if lt IE 7]>
+    <meta http-equiv="refresh" content="0; url=/YouLose.htm"/><![endif]-->
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="css/normalize.css" type="text/css"/>
+    <link rel="stylesheet" href="css/secondary.css" type="text/css"/>
+    <link rel="stylesheet" href="css/index.css" type="text/css"/>
+    <!--[if lt IE 9]>
+    <script language="javascript" type="text/javascript" src="js/Kunyi.Respond.min.js"></script><![endif]-->
+    <script language="javascript" type="text/javascript" src="js/KunyiHTML5.min.js"></script>
+    <script language="javascript" type="text/javascript" src="js/Kunyilibrary.js"></script>
+    <script src="js/yuyue.js"></script>
+</head>
+<body>
+<script language="javascript" type="text/javascript" src="js/Kunyi.Init.js"></script>
+<header th:include="header::header"></header>
+<nav th:include="nav::nav"></nav>
+
+<section class="BaseMark">
+    <div class="bread">您所在的位置<span><a href="index">首页</a><a href="jiuzhen">>就诊指南</a> > 预约挂号</span></div>
+    <div class="baseLeft">
+        <div class="title title05_52">就诊指南</div>
+        <div class="newsMenu">
+            <ul>
+                <li class="first"><a href="jiuzhen" title="就诊流程"><em>就诊流程</em></a></li>
+                <li class="active"><a href="keshi" title="科室导航"><em>科室导航</em></a></li>
+                <li>
+                    <a href="chuzhen" title="出诊安排"><em>出诊安排</em></a>
+                </li>
+                <li><a href="ArticleList-10" title="医保服务"><em>预约挂号</em></a></li>
+                <li><a href="http://map.baidu.com" title="来院路线"><em>地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;图</em></a></li>
+            </ul>
+        </div>
+        <div class="tools"><a href="http://www.o2omed.com.cn/" target="_blank"><img src="images/ico_001.gif" width="52"
+                                                                                    height="52"><em>互联智慧分诊平台</em></a><a
+                style="margin-right:0;" href="96195"><img src="images/ico_002.gif" width="52" height="52"><em><span>96195</span>
+            综合平台</em></a><a href="Hospital"><img src="images/ico_003.gif" width="52" height="52"><em>名医馆</em></a><a
+                style="margin-right:0;" href="DrugsInfo" class="last"><img src="images/ico_004.gif" width="52"
+                                                                           height="52"><em>信息查询</em></a>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    <div class="baseRight">
+        <div class="title01" th:text="${doctor.getdName()}"></div>
+        <div class="dDutyInfo">
+            <div class="item01">
+                <h5 th:text="${doctor.dName}"></h5>
+                <em th:text="${office.kName}"> &nbsp;</em>
+                <span th:text="${doctor.eAddress}">
+                </span><br/><br/>
+                <span th:text="${doctor.postion}"></span>
+            </div>
+            <div class="item02">
+                <em>就诊日期</em>
+                <p th:text="${rq}"></p>
+                <span>挂号费 &nbsp; &nbsp;
+                    <i th:if="${doctor.isExpert==1}">¥： 5.5</i>
+                    <i th:if="${doctor.isExpert==0}">¥： 3.5</i>
+                </span>
+            </div>
+            <div class="item03">
+                <em>就诊位置</em>
+                <p th:text="${doctor.sAddress}"></p>
+                <span th:if="${doctor.isExpert==1}" th:text="${office.kName+'专家号(200)'}"></span>
+                <span th:if="${doctor.isExpert==0}" th:text="${office.kName+'普通号(300)'}"></span>
+                <br/>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="dSourse">
+            <p>选择号源信息</p>
+            <ul>
+                <li th:each="date,dateStat:${dateList}" data-num="2">
+                    <em th:text="${dateStat.count}"></em><span th:text="${date}"></span>
+                </li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+        <div class="dForm">
+            <form id="PostOrderForm">
+                <input name="tbHashReg" type="hidden" id="tbHashReg" value="TSqjejA2mN1/yji0BZacN/bs6s6iYBhZ4">
+                <input name="tbTokenOrder" type="hidden" id="tbTokenOrder" value="DC72758EB101998D56E3F29756158673">
+                <input type="hidden" name="tbNumber" id="tbNumber" value="2" datatype="n1-2" nullmsg="请重新选择号源！" errormsg="请重新选择号源！">
+                <div class="btn">
+                    <input type="button" name="btnPostOrder" value="提交" id="btnPostOrder" class="animated"
+                     style="margin-top: -30px;">
+                </div>
+                <span class="Validform_checktip"></span>
+            </form>
+        </div>
+    </div>
+
+    <div class="clear"></div>
+</section>
+
+<footer th:include="footer::footer"></footer>
+
+<div id="Footer_CodeDiv">
+
+    <!--<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F4a1d36386e8734a5fd29acec9114818d' type='text/javascript'%3E%3C/script%3E"));
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fafd2ae44e23648da4e8a81a7b1349be4' type='text/javascript'%3E%3C/script%3E"));
+</script>--></div>
+<script language="javascript" type="text/javascript" src="js/Kunyi.Common.js"></script>
+<script language="javascript" type="text/javascript" src="js/Kunyi.Secondary.js"></script>
+<script language="javascript" type="text/javascript" src="js/Kunyi.Office.js"></script>
+</body>
+</html>

@@ -34,7 +34,7 @@
 <script src="js/koffice.js"></script>
 <script src="js/jquery-1.12.4.js"></script>
 <section class="BaseMark">
-    <div class="bread">您所在的位置<span><a href="index">首页</a>><a href="ArticleList-54">就诊指南</a> > <a href="officeList">科室导航</a> > <a  th:href="@{kofficeById(id=${doctorList.get(0).kId})}" th:text="${kName}"></a> > 专家介绍</span></div>
+    <div class="bread">您所在的位置<span><a href="index">首页</a>><a href="ArticleList-54">就诊指南</a> > <a href=" officeList">科室导航</a> > <a  th:href="@{kofficeById(id=${doctorList.get(0).kId})}" th:text="${kName}"></a> > 专家介绍</span></div>
     <div class="baseLeft">
         <div class="partLeft">
             <div class="title partTitle"><a href="keshimx"></a></div>
@@ -68,14 +68,14 @@
             <div class="title01">专家介绍</div>
             <div class="Expert">
                 <ul>
-                    <li th:each="d:${doctorList}"><a href="ys" target="_blank">
+                    <li th:each="d:${doctorList}"><a th:href="@{ys(did=${d.id})}" target="_blank">
                         <img th:src="@{/doctorImages/{photopath}(photopath=${d.photopath})}" class="load" width="120"
                              height="162" title="医生" alt="医生"></a>
                         <a href="ys" target="_blank" title="医生" class="ATitle" th:text="${d.dName}"></a>
                         <h4 th:text="${d.postion}"></h4>
                         <p th:text="${d.graduate}"></p>
                         <div><a class="coffee" target="_blank"  th:href="@{ys(did=${d.id})}">详细</a>
-                            <a class="green" href="#" target="_blank">预约</a></div>
+                            <a class="green" th:href="@{goYuYue(dId=${d.id})}" target="_blank">预约</a></div>
                     </li>
 
                 </ul>

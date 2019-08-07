@@ -149,6 +149,43 @@ a:hover {
     zoom: 1; /* for IE6 IE7 */
 }
 
+
+
+
+.dDutyInfo,.dOrders{padding:30px 5%;margin-top:38px;border:1px solid #e7e6e6}
+.dDutyInfo div,.dOrders div{height:78px}
+.dDutyInfo h5,.dOrders h5{font-size:18px;line-height:18px;color:#978571;padding-bottom:8px}
+.dDutyInfo em,.dOrders em{font-size:16px;line-height:16px;color:#666}
+.dDutyInfo p,.dOrders p{line-height:24px;color:#adadad}
+.dDutyInfo p em,.dOrders p em{line-height:24px}
+.dDutyInfo i,.dOrders i{color:#ff7544}
+.dDutyInfo div.item01{float:left;width:50%;color:#adadad;min-width:236px}
+.dDutyInfo div.item02{float:right;padding-left:3.2%;min-width:128px;border-left:1px solid #e7e6e6}
+.dDutyInfo div.item03{float:right;width:22%;padding-left:3.2%;min-width:128px;border-left:1px solid #e7e6e6}
+.dDutyInfo div.item02 em,.dDutyInfo div.item03 em{display:block}
+.dDutyInfo div.item02 p,.dDutyInfo div.item03 p{line-height:32px}
+
+.dSourse p{font-size:16px;padding:30px 0px 30px 22px;color:#6bcbca;line-height:18px;background:url(../images/ico_004.png) left center no-repeat}
+
+.dSourse ul li{width:222px;transition:all .28s linear;-moz-transition:all .28s linear;-webkit-transition:all .28s linear;-o-transition:all .28s linear;height:70px;display:block;margin-right:10px;margin-top:10px;float:left;cursor:pointer;font-size:14px;border:1px solid #e9e9e9;line-height:70px;color:#333}
+.dSourse ul li em{width:42px;background:#f1f1f1;height:42px;margin-left:8.5%;margin-right:8.5%;margin-top:13px;border:1px solid #e9e9e9;border-radius:21px;display:inline-block;line-height:42px;text-align:center;font-size:24px;font-family:"Times New Roman";color:#978571;font-style:italic;transition:all .28s linear;-moz-transition:all .28s linear;-webkit-transition:all .28s linear;-o-transition:all .28s linear height:70px;float:left}
+.dSourse ul li:hover,.dSourse ul li.current{background:#ff7544;color:#fff;box-shadow:0px 4px 18px 4px rgba(128 ,128 ,128 ,0.25)}
+.dSourse ul li:hover em,.dSourse ul li.current em{background:#fff}
+
+.dForm{padding-top:56px;height:40px;position:relative}
+/*.dForm .DIVCode{position:absolute;bottom:0px;left:0px;width:358px;height:40px}
+.dForm .DIVCode label{width:76px;text-align:left;display:inline-block;font-size:14px;line-height:40px;vertical-align:top}
+.dForm .DIVCode label img{width:8px;height:8px;margin:0;margin-right:6px}
+.dForm .DIVCode .Validform_checktip{position:absolute;bottom:-40px;left:0px;width:198px;height:42px;margin:0px;padding-left:13px;line-height:42px}
+.dForm .DIVCode  input{width:170px;height:38px;padding:0;border:1px solid #e5e5e5;display:inline-block;text-indent:13px}
+.dForm .DIVCode  a{display:block;width:78px;height:38px;border:1px solid #e5e5e5;left:256px;position:absolute;top:0px;text-align:center;line-height:40px;font-size:14px}
+.dForm .DIVCode  a:hover{background:#ff7544;color:#fff}
+.dForm .DIVCode  .IMGCheckcode{position:absolute;top:3px;left:168px}*/
+.dForm .btn{width:52.8%;height:40px;position:absolute;bottom:0px;right:0px;padding-left: -100px;}
+.dForm .btn a,.dForm .btn input{width:46%;line-height:40px;display:block;text-align:center;border:none;background:#6bcbca;font-size:14px;color:#fff;cursor:pointer;border-radius:3px;float:left}
+.dForm .btn input{float:right}
+.dForm span.Validform_wrong{position:absolute;bottom:40px;left:0px;width:198px;height:42px;margin:0px;padding-left:13px;line-height:42px}
+
 div#black_overlay {
     position: fixed;
     top: 0%;
@@ -935,7 +972,7 @@ nav .nav {
     padding-top: 5px;
     position: absolute;
     top: 0px;
-    right: 0px;
+    left: 255px;
     background: url(../images/Yellowline.jpg) repeat-x;
     padding-left: 5px;
 }

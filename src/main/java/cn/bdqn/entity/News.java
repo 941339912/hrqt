@@ -6,7 +6,11 @@ public class News {
   private long id;
   private String title;
   private String content;
-  private java.sql.Date createDate;
+  private String createDate;
+  private String createRen;
+  private String photoPath;
+  private long isNewGongGao;
+  private long readNum;
   private long status;
   private String remark;
 
@@ -38,12 +42,48 @@ public class News {
   }
 
 
-  public java.sql.Date getCreateDate() {
+  public String getCreateDate() {
     return createDate;
   }
 
-  public void setCreateDate(java.sql.Date createDate) {
+  public void setCreateDate(String createDate) {
     this.createDate = createDate;
+  }
+
+
+  public String getCreateRen() {
+    return createRen;
+  }
+
+  public void setCreateRen(String createRen) {
+    this.createRen = createRen;
+  }
+
+
+  public String getPhotoPath() {
+    return photoPath;
+  }
+
+  public void setPhotoPath(String photoPath) {
+    this.photoPath = photoPath;
+  }
+
+
+  public long getIsNewGongGao() {
+    return isNewGongGao;
+  }
+
+  public void setIsNewGongGao(long isNewGongGao) {
+    this.isNewGongGao = isNewGongGao;
+  }
+
+
+  public long getReadNum() {
+    return readNum;
+  }
+
+  public void setReadNum(long readNum) {
+    this.readNum = readNum;
   }
 
 

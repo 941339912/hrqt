@@ -41,7 +41,7 @@
              height="150" alt="医生"/>
         <h3 id="H3Name" th:text="${doctor.dName}"></h3>
         <h4 id="H4Position" th:text="${doctor.postion}"></h4>
-        <a href="#" target="_blank">预约</a>
+        <a href="#"th:href="@{goYuYue(dId=${doctor.id})}" target="_blank">预约</a>
     </div>
     <div class="doctorRight">
         <div class='import import1'></div>

@@ -19,6 +19,7 @@
         </where>
     </select>
 
+
     <select id="findByIdDoctor" resultType="Doctor" parameterType="int">
         SELECT 	d.id,d.kId,d.dName,d.dPinyin,d.birthDate,d.cyDate,d.eAddress,k.kName kName,d.postion,
         d.edcuation,d.graduate,d.resume,d.isExpert,d.achievement,d.photopath,d.status,d.remark

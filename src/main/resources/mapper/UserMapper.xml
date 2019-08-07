@@ -2,6 +2,19 @@
 <!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.bdqn.dao.UserMapper">
+    <!-- 登录 -->
+    <select id="findUser" resultType="User" parameterType="String">
+        select * from user where phone=#{phone}
+	</select>
 
+    <!-- 注册 -->
+    <insert id="addUser"  parameterType="User">
+        insert into user (phone,password,userName,identityId,roleId)
+        values (#{phone},#{password},#{userName},#{identityId},#{roleId})
+    </insert>
 
+    <!-- 查询所有 -->
+    <select id="findAllUser" resultType="User">
+        select * from user
+    </select>
 </mapper>

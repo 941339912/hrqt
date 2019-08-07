@@ -2,6 +2,34 @@
 <!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.bdqn.dao.NewsMapper">
-
-
+<!--    查询所有数据，分页-->
+    <select id="findNewsList" resultType="News" parameterType="int">
+        select 	id,title,content,createDate,createRen,photoPath,isNewGongGao,readNum,status,remark
+        from news
+        where isNewGongGao = #{NewOrGongGao}
+        <if test="ydcs==0">
+            order by createDate desc
+        </if>
+        <if test="ydcs==1">
+            order by readNum desc
+        </if>
+        limit #{currPage}, #{pageSize};
+    </select>
+<!--    查询总记录数-->
+    <select id="findCount" resultType="int" parameterType="int">
+        select COUNT(1)
+        from news
+        where isNewGongGao = #{newOrGg}
+    </select>
+<!--    更新阅读次数-->
+    <update id="findUpdateReadNum">
+        UPDATE news SET readNum = #{readNum}
+        WHERE id = #{id} ;
+    </update>
+<!--    查询新闻和公告详情-->
+    <select id="findQueryNewsXq" resultType="News">
+        SELECT 	id,title,content,createDate,createRen,photoPath,isNewGongGao,readNum,STATUS,remark
+        FROM news
+        WHERE id = #{id}
+	</select>
 </mapper>

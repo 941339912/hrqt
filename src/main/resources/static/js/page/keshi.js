@@ -43,7 +43,7 @@ function part() {
         for (var i = 0; i < medicals.length; i++) {
             medId = medicals[i].id;
             $str = $("<div class=\"part01\" id='Department" + medId + "'><div class=\"partTitle\"><div class=\"left\">" + medicals[i].name + "</div><div class=\"right\">" +
-                "<a class='green' href='DutyTime-1'>出诊安排</a></div></div>");
+                "<a class='green' href='chuzhen'>出诊安排</a></div></div>");
             $part.append($str);
             for (var j = 0; j < koffices.length; j++) {
                 // alert(medicals[0].id + "-----" + koffices[j].medicalId);

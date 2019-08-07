@@ -13,12 +13,14 @@ import java.util.List;
 public interface MedicalMapper {
     /**
      * 查询所有医学部
+     *
      * @return
      */
-    List<Medical> selectMedicals(@Param("id")Long id);
+    List<Medical> selectMedicals(@Param("id") Long id);
 
     /**
      * 查询所有部门
+     *
      * @return
      */
     public List<Medical> findMedicalList();

@@ -15,6 +15,7 @@ public interface DoctorService {
 
     /**
      * 根据id查询医生
+     *
      * @param did
      * @return
      */
@@ -22,6 +23,7 @@ public interface DoctorService {
 
     /**
      * 根据科室查询医生
+     *
      * @param kId
      * @return
      */
@@ -29,8 +31,9 @@ public interface DoctorService {
 
     /**
      * 依据科室查询医生
+     *
      * @param kId
      * @return
      */
-    List<Doctor> selectDoctors(@Param("kId")Long kId);
+    List<Doctor> selectDoctors(@Param("kId") Long kId);
 }

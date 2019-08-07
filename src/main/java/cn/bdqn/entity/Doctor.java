@@ -15,6 +15,15 @@ public class Doctor {
   private String edcuation;
   private String graduate;
   private String resume;
+
+  public String getsAddress() {
+    return sAddress;
+  }
+
+  public void setsAddress(String sAddress) {
+    this.sAddress = sAddress;
+  }
+
   private long kId;
   private long isExpert;
   private String achievement;
@@ -22,6 +31,7 @@ public class Doctor {
   private long status;
   private String remark;
   private String kName;
+  private String sAddress;
 
   public long getId() {
     return id;

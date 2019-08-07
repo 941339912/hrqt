@@ -6,6 +6,9 @@ import java.util.HashMap;
 
 public class SmsServiceImpl implements SmsService {
 
+	public static String smsMassage = null;	//提示消息
+	public static int msgStatics = 0;	//发送状态
+
 	@Override
 	public void send(String to, String templateId, String[] datas) {
 		HashMap<String, Object> result = null;
@@ -19,11 +22,13 @@ public class SmsServiceImpl implements SmsService {
 		result = restAPI.sendTemplateSMS(to, templateId, datas);
 
 		if ("000000".equals(result.get("statusCode"))) {
-			System.out.println("短信发送成功");
+			smsMassage = "短信发送成功，请注意查收！";
+			msgStatics = 1;
 		} else {
 			// 异常返回输出错误码和错误信息
-			System.out.println("错误码=" + result.get("statusCode") + " 错误信息= "
-					+ result.get("statusMsg"));
+//			smsMassage = "错误码=" + result.get("statusCode") + " 错误信息= " + result.get("statusMsg");
+			smsMassage = "发送失败，错误信息= " + result.get("statusMsg");
+			msgStatics = 2;
 		}
 	}
 

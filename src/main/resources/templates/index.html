@@ -20,11 +20,12 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="css/normalize.css" type="text/css"/>
     <link rel="stylesheet" href="css/index.css" type="text/css"/>
-    <!--    <link rel="stylesheet" href="css/secondary.css" type="text/css" />-->
+    <!--    <link rnel="stylesheet" href="css/secondary.css" type="text/css" />-->
     <!--[if lt IE 9]>
     <script language="javascript" type="text/javascript" src="js/Kunyi.Respond.min.js"></script><![endif]-->
     <script language="javascript" type="text/javascript" src="js/KunyiHTML5.min.js"></script>
     <script language="javascript" type="text/javascript" src="js/Kunyilibrary.js"></script>
+    <script language="javascript" type="text/javascript" src="js/index_news.js"></script>
 </head>
 <body>
 <script language="javascript" type="text/javascript" src="js/Kunyi.Init.js"></script>
@@ -33,32 +34,32 @@
 <!--页面菜单-->
 <nav th:include="nav::nav"></nav>
 
+<!--轮播图-->
 <section class="bannerBase BaseMark">
     <div class="Banners">
-        <ul class="AnimUl">
+        <ul class="AnimUl" id="ul_lunbo">
             <li><a href="http://www.hnsrmyy.net/NewsDetail-8464" title="院党委举行学习党的十八届六中全会精神和 省十次党代会精神专题辅导"><img
-                    src="uploadfiles/thumb/201607271939462.JPG" alt="院党委举行学习党的十八届六中全会精神和 省十次党代会精神专题辅导"/></a></li>
+                    src="images/lunbo01.jpg" alt="院党委举行学习党的十八届六中全会精神和 省十次党代会精神专题辅导"/></a></li>
 
             <li><a href="http://www.hnsrmyy.net/NewsDetail-8476" title="2016山西省眼科医师大会开启眼科发展新篇章"><img
-                    src="uploadfiles/thumb/201607271939462.jpg" alt="2016山西省眼科医师大会开启眼科发展新篇章"/></a></li>
+                    src="images/lunbo02.jpg" alt="2016山西省眼科医师大会开启眼科发展新篇章"/></a></li>
 
-            <li><a href="http://www.hnsrmyy.net/NewsDetail-8470" title="立足中原 开放合作
-“直通梅奥国际诊疗中心中原中心”启动"><img src="uploadfiles/thumb/201607271939462.JPG" alt="立足中原 开放合作
-“直通梅奥国际诊疗中心中原中心”启动"/></a></li>
+            <li><a href="http://www.hnsrmyy.net/NewsDetail-8470" title="立足中原 开放合作“直通梅奥国际诊疗中心中原中心”启动">
+                <img src="images/lunbo03.JPG" alt="立足中原 开放合作“直通梅奥国际诊疗中心中原中心”启动"/></a></li>
 
             <li><a href="http://www.hnsrmyy.net/NewsDetail-8468" title="山西省医院自媒体联盟成立了！"><img
-                    src="uploadfiles/thumb/2016072719395872.JPG" alt="山西省医院自媒体联盟成立了！"/></a></li>
+                    src="images/lunbo04.jpg" alt="山西省医院自媒体联盟成立了！"/></a></li>
 
             <li><a href="http://www.hnsrmyy.net/NewsDetail-8472" title="“爱心传递 防治出生缺陷”公益行活动走进山西"><img
-                    src="uploadfiles/thumb/2016072719395872.JPG" alt="“爱心传递 防治出生缺陷”公益行活动走进山西"/></a></li>
+                    src="images/lunbo05.jpg" alt="“爱心传递 防治出生缺陷”公益行活动走进山西"/></a></li>
 
 
             <li><a href="http://www.hnsrmyy.net/NewsDetail-7944" title="我院空中救护成功转运首位重症患者―首个“中国紧急救援山西航空救援基地”落户省医"><img
-                    src="uploadfiles/thumb/2016072719395872.JPG" alt="我院空中救护成功转运首位重症患者―首个“中国紧急救援山西航空救援基地”落户省医"/></a>
+                    src="images/lunbo06.jpg" alt="我院空中救护成功转运首位重症患者―首个“中国紧急救援山西航空救援基地”落户省医"/></a>
             </li>
 
-            <li><a href="javascript:void(0)" title=""><img src="uploadfiles/thumb/2016090608460311.jpg" alt=""/></a>
-            </li>
+<!--            <li><a href="javascript:void(0)" title=""><img src="uploadfiles/thumb/2016090608460311.jpg" alt=""/></a>-->
+<!--            </li>-->
         </ul>
         <div class="tools">
             <a href="javascript:void(0)" class="prev"><img alt="上一幅" src="images/btn_prev01.png" width="34"
@@ -83,54 +84,25 @@
 </section>
 
 <section class="NewsBase BaseMark">
-    <div class="tools"><a href="http://www.o2omed.com.cn/" target="_blank"><img src="images/ico_001.gif" class="load"
+    <div class="tools"><a href="#" target="_blank"><img src="images/ico_001.gif" class="load"
                                                                                 width="52"
                                                                                 height="52"/><em>互联智慧分诊平台</em></a><a
-            href="96195"><img src="images/ico_002.gif" class="load" width="52" height="52"/><em><span>96195</span> 综合平台</em></a>
-        <a href="Hospital"><img alt="" src="images/ico_003.gif" class="load" width="52" height="52"/><em>名医馆</em></a><a
-                href="DrugsInfo" class="last"><img src="images/ico_004.gif" class="load" width="52" height="52"/><em>信息查询</em></a>
+            href="#"><img src="images/ico_002.gif" class="load" width="52" height="52"/><em><span>96195</span> 综合平台</em></a>
+        <a href="#"><img alt="" src="images/ico_003.gif" class="load" width="52" height="52"/><em>名医馆</em></a><a
+                href="#" class="last"><img src="images/ico_004.gif" class="load" width="52" height="52"/><em>信息查询</em></a>
     </div>
-
+<!--    <input type="hidden" id="newsOrGgID" value=""/>-->
     <div class="noticeBase">
-        <div class="notice notice01"><a href="news" class="more">更多</a>
+        <div class="notice notice01" id="div_gonggao"><a href="news?NewOrGongGao=1"  class="more">更多</a>
             <div class="title"><em>最新公告</em><span>Latest Announcement</span></div>
-            <div class="first"><a href="NewsDetail-8528" id="ANoticeFirst" target="_blank"
-                                  title="关于征集阜外华中心血管病医院院徽的公告"><img src="pic/pic_005.jpg" class="load" width="126"
-                                                                   height="76"/></a>
-                <div><span>2017-01-09</span><a href='NewsDetail-8528' title='关于征集阜外华中心血管病医院院徽的公告' target='_blank'>关于征集阜外华中心血管病医院院徽的公告</a>
-                </div>
-                <div class="clear"></div>
-            </div>
-            <ul>
-                <li><span>2017-01-06</span> <a target="_blank" href="NewsDetail-8513"
-                                               title="2017年1月14日（周六）、1月15日（周日）出诊医师排班表">2017年1月14日（周六）、1月15日（周日）出诊医师排班表</a>
-                </li>
-                <li><span>2017-01-05</span> <a target="_blank" href="NewsDetail-8512" title="医院标题2017年人才招聘面试通知">医院标题2017年人才招聘面试通知</a>
-                </li>
-                <li><span>2017-01-04</span> <a target="_blank" href="NewsDetail-8511" title="关于我院2017年人才招聘面试工作 提前举行的通知">关于我院2017年人才招聘面试工作
-                    提前举行的通知</a></li>
-            </ul>
+<!--            拼接最新公告-->
         </div>
 
 
-        <div class="notice notice02">
-            <a href="news" class="more">更多</a>
+        <div class="notice notice02" id="div_new">
+            <a href="news?NewOrGongGao=2" class="more">更多</a>
             <div class="title"><em>新闻快讯</em><span>Hospital News</span></div>
-            <div class="first"><a href="NewsDetail-8479" id="ANewsFirst" target="_blank" title="互联智慧疼痛医联体全面启动"><img
-                    src="pic/pic_005.jpg" class="load" width="126" height="76"/></a>
-                <div><span>2016-12-29</span><a href='NewsDetail-8479' title='互联智慧疼痛医联体全面启动' target='_blank'>互联智慧疼痛医联体全面启动</a>
-                </div>
-                <div class="clear"></div>
-            </div>
-            <ul>
-                <li><span>2016-12-29</span> <a target="_blank" href="NewsDetail-8478"
-                                               title="豫医联盟医院标题分会成立">豫医联盟医院标题分会成立</a></li>
-                <li><span>2016-12-29</span> <a target="_blank" href="NewsDetail-8477"
-                                               title="2016年肺癌多学科综合治疗论坛 暨山西省肺癌规范化治疗学习班顺利召开">2016年肺癌多学科综合治疗论坛
-                    暨山西省肺癌规范化治疗学习班顺利召开</a></li>
-                <li><span>2016-12-29</span> <a target="_blank" href="NewsDetail-8476" title="2016山西省眼科医师大会开启眼科发展新篇章">2016山西省眼科医师大会开启眼科发展新篇章</a>
-                </li>
-            </ul>
+<!--        拼接新闻快讯-->
         </div>
     </div>
     <div class="clear"></div>
@@ -156,13 +128,6 @@
     <div class="contents" id="doc_d1">
         <ul data-num="0" class="ul_doctor">
 
-            <!--            <li><a href="ys" title="医生姓名" target="_blank" class="img"><img alt="姓名" title="姓名"-->
-            <!--               src="pic/201603221527067.png" width="120" height="162"/></a>-->
-            <!--                <a href="ys" title="医生姓名" target="_blank" class="name">姓名</a>-->
-            <!--                <a href="keshi" title="所在医院" target="_blank" class="office">所在医院医院</a>-->
-            <!--                <a href="ys" title="姓名" target="_blank" class="post">主任医师 研究生导师</a>-->
-            <!--                <a href="ys" title="姓名" target="_blank" class="btn more">详细</a>-->
-            <!--                <a href="#" target="_blank" class="btn date">预约</a></li>-->
         </ul>
         <div class="hackR"></div>
         <div class="hackL"></div>
@@ -231,13 +196,6 @@
     </div>
     <div class="contents">
         <ul data-num="0" id="officeEmphasis">
-            <!--<li><i class="ico01"></i>
-                 <div class="img animated"><img alt="呼吸内科" src="pic/pic_007.png" width="80" height="80"/></div>
-                 <a href="keshimx" title="呼吸内科" class="office">呼吸内科</a>
-                 <p>我科始建于上世纪70年代初，目前为卫生部国家重点专科建设项目单位，山西省重点……</p>
-                 <a href="keshimx" title="呼吸内科" class="btn more">查看详细</a>
-                 <a href="keshiys" title="呼吸内科医生" class="btn doctor">科室专家</a></li>-->
-
         </ul>
         <div class="hackR"></div>
         <div class="hackL"></div>
@@ -249,7 +207,7 @@
             <button class="animated">返回重点科室</button>
         </div>
         <div class="OFContent">
-            <div class="OListBase"></div>
+            <div class="OListBase" style="width: 3600px"></div>
         </div>
     </div>
 </section>

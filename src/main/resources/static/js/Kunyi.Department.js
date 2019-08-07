@@ -25,7 +25,7 @@ $(function(){
     }
     $("#GoToOffice").click(function(e){
         if ($("#ddlOffices").val() != null && $("#ddlOffices").val() != "0") {
-            var str = "Office-"+$("#ddlOffices").val()+".html";
+            var str = "kofficeById?id="+$("#ddlOffices").val();
             window.location.href = str;
         }
     });

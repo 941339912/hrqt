@@ -43,7 +43,7 @@ $(function () {
                 var doctors=data.doctors;
                 var $ys=$("#ys");
                 for (var i=0;i<doctors.length;i++){
-                    var $str=$("<div class=\"list01 first\"><a target=\"_blank\" href=\"Doctor-122\">"+doctors[i].dName+"</a></div>");
+                    var $str=$("<div class=\"list01 first\"><a target=\"_blank\" href=\"#\">"+doctors[i].dName+"</a></div>");
                     $ys.append($str);
                 }
             },'json');
@@ -59,7 +59,7 @@ $(function () {
             for (var i=0;i<doctors.length;i++){
                 /*var $str=$("<div class=\"list01 first\"><a target=\"_blank\" href=\"Doctor-122\">"+doctors[i].dName+"</a></div>");
                 $ys.append($str);*/
-                did.after("<div class=\"list01 first\"><a target=\"_blank\" href=\"Doctor-122\">"+doctors[i].dName+"</a></div>");
+                did.after("<div class=\"list01 first\"><a target=\"_blank\" href=\"#\">"+doctors[i].dName+"</a></div>");
             }
         },'json');
     });
